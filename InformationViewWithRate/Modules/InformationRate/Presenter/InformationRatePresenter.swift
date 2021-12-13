@@ -43,7 +43,6 @@ extension InformationRatePresenter: InformationRatePresenterType {
 
 extension InformationRatePresenter: СhangeRatePresenterType {
     func changeRate(nameRate name: String) {
-        print(routerDelegate)
         self.routerDelegate?.chooseRate(nameRate: name)
     }
 }
@@ -63,7 +62,6 @@ extension InformationRatePresenter: InformationRateInteractorDelegate {
         }
         let cells = createCells(informationRate: informationRate)
         view.onInformationRateFetched(cells: cells)
-        print(cells.count)
     }
 //    Создание вью из ячеек
     private func createCells(informationRate: InformationRate) -> [CellViewType] {

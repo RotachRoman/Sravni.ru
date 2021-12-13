@@ -52,7 +52,7 @@ class ButtonRateCell: CellViewType {
     private func setupTitle(){
         title.textColor = UIColor(red: 0.388, green: 0.435, blue: 0.49, alpha: 1)
         title.font = UIFont(name: "SFProText-Regular", size: 17)
-        var paragraphStyle = NSMutableParagraphStyle()
+        let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.08
         title.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.kern: -0.41, NSAttributedString.Key.paragraphStyle: paragraphStyle])
     }

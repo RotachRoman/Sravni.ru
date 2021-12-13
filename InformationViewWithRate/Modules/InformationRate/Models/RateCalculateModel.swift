@@ -11,5 +11,5 @@ struct RateCalculate: Codable {
     //    defaultRateSelection стандартное значение выбранной ячейки, поскольу в следущем экране будут получены данные "коэффициентов"
     let title: String
     var selectionName: String?
-    var rate: Double
+    var rateCount: Double?
 }

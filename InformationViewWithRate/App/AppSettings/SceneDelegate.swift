@@ -18,6 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let setupAppViewController: SetupAppRouterType = SetupAppRouter(window: window)
+        let _: SetupAppRouterType = SetupAppRouter(window: window)
     }
 }

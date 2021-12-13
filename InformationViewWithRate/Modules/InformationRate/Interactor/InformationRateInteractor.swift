@@ -49,10 +49,7 @@ extension InformationRateInteractor: InformationRateInteractorType {
             while(infoRate[index].title != title) {
                 index += 1
             }
-            print(self.informationRate!.rate![index].title)
-            self.informationRate!.rate![index].rate = rate.rate
-            print(rate.rate)
-            print(self.informationRate!.rate![index].rate)
+            self.informationRate!.rate![index].rateCount = rate.rate
             self.informationRate!.rate![index].selectionName = rate.selectionName
             self.interatorDelegate?.onInformationRateFetched(informationRate: self.informationRate!)
         }

@@ -255,10 +255,10 @@
 		CBAC6FC32767AAD000342297 /* InformationRate */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FC42767AAD000342297 /* Presenter */,
 				CBAC6FCF2767AAD000342297 /* View */,
 				CBAC6FE22767AAD000342297 /* Protocols */,
 				CBAC6FE42767AAD000342297 /* Interactor */,
+				CBAC6FC42767AAD000342297 /* Presenter */,
 				CBAC6FE62767AAD000342297 /* Router */,
 				CBAC6FC92767AAD000342297 /* Models */,
 			);
@@ -286,9 +286,9 @@
 		CBAC6FC92767AAD000342297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */,
 				CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */,
 				CBAC6FCB2767AAD000342297 /* NoteModel.swift */,
-				CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */,
 				CBAC6FCD2767AAD000342297 /* RateModel.swift */,
 				CBAC6FCE2767AAD000342297 /* TariffColor.swift */,
 			);
@@ -311,12 +311,12 @@
 				CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */,
 				CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */,
 				CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */,
-				CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */,
-				CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */,
-				CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */,
 				CBAC6FD52767AAD000342297 /* TariffView */,
-				CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */,
 				CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */,
+				CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */,
+				CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */,
+				CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */,
+				CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

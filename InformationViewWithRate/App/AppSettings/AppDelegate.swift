@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         } else {
             window = UIWindow(frame: UIScreen.main.bounds)
-            let setupAppViewController: SetupAppRouterType = SetupAppRouter(window: window)
+            let _: SetupAppRouterType = SetupAppRouter(window: window)
         }
         return true
     }

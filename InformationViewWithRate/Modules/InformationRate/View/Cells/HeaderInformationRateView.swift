@@ -1,5 +1,5 @@
 //
-//  HeaderIRView.swift
+//  HeaderInformationRateView.swift
 //  InformationViewWithRate
 //
 //  Created by Rotach Roman on 04.12.2021.
