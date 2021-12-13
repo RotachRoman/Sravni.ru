@@ -1,6 +1,6 @@
 //
 //  CreateViewFromCellsInformationRateFacade.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 10.12.2021.
 //

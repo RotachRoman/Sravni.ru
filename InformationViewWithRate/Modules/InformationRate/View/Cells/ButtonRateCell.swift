@@ -1,6 +1,6 @@
 //
 //  ButtonRateCell.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 11.12.2021.
 //

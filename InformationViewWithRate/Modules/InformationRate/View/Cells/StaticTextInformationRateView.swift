@@ -1,6 +1,6 @@
 //
 //  StaticTextInformationRateView.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 05.12.2021.
 //

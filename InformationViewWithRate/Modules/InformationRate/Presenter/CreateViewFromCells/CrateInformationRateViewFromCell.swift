@@ -1,6 +1,6 @@
 //
 //  CrateInformationRateViewFromCell.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 10.12.2021.
 //
@@ -37,19 +37,19 @@ final class CrateInformationRateViewFromCell: CreateInformationRateCellAlgoritm 
     // MARK: - ячейка с тарифом
     override func addTariffCell() -> CellViewType? {
 //        MARK: - Убрать отсюда цвета
-        let cheaperTariff =  BezierInformationRateView(text: informationRate.minRate.info,
+        let cheaperTariff =  TariffInformationRateView(text: informationRate.minRate.info,
                                     ratio: informationRate.minRate.ratio,
                                     sale: informationRate.minRate.sale,
                                     backgroundCoolor: UIColor(red: 1, green: 1, blue: 1, alpha: 1),
                                     saleColor: UIColor(red: 0.051, green: 0.82, blue: 0.286, alpha: 1))
-        let expensivelyTariff = BezierInformationRateView(text: informationRate.maxRate.info,
+        let expensivelyTariff = TariffInformationRateView(text: informationRate.maxRate.info,
                                     ratio: informationRate.maxRate.ratio,
                                     sale: informationRate.maxRate.sale,
                                     backgroundCoolor: UIColor(red: 0.984, green: 0.945, blue: 0.945, alpha: 1),
                                     saleColor: UIColor(red: 0.757, green: 0.114, blue: 0.114, alpha: 1))
         
         //        MARK: - имя или заголовок, путаница
-        let bezierView = BezierCellInfRateView(header: informationRate.header, cheaperBezier: cheaperTariff, expensivelyBezier: expensivelyTariff)
+        let bezierView = TariffCellInfRateView(header: informationRate.header, cheaperTariff: cheaperTariff, expensivelyTariff: expensivelyTariff)
         return bezierView
     }
     

@@ -11,34 +11,48 @@
 		CB876300275E4C5900CC8994 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8762FF275E4C5900CC8994 /* SceneDelegate.swift */; };
 		CB876307275E4C5C00CC8994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB876306275E4C5C00CC8994 /* Assets.xcassets */; };
 		CB87630A275E4C5C00CC8994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB876308275E4C5C00CC8994 /* LaunchScreen.storyboard */; };
-		CB87631C275E4E2100CC8994 /* BTInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CB87631B275E4E2100CC8994 /* BTInformation.json */; };
 		CB87631E275E4E5B00CC8994 /* StringHightExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87631D275E4E5B00CC8994 /* StringHightExtension.swift */; };
 		CB876323275E4F3700CC8994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876322275E4F3700CC8994 /* ViewController.swift */; };
 		CB876326275E4FA800CC8994 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876325275E4FA800CC8994 /* AppRouter.swift */; };
 		CB876328275E4FC200CC8994 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876327275E4FC200CC8994 /* AppViewController.swift */; };
 		CB87632A275E4FD600CC8994 /* SetupAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876329275E4FD600CC8994 /* SetupAppRouter.swift */; };
-		CB876348275E50D300CC8994 /* InformationRatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87632E275E50D300CC8994 /* InformationRatePresenter.swift */; };
-		CB876349275E50D300CC8994 /* InformationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876330275E50D300CC8994 /* InformationRateModel.swift */; };
-		CB87634A275E50D300CC8994 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876331275E50D300CC8994 /* RateModel.swift */; };
-		CB87634B275E50D300CC8994 /* TariffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876332275E50D300CC8994 /* TariffColor.swift */; };
-		CB87634C275E50D300CC8994 /* RateInforamationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876335275E50D300CC8994 /* RateInforamationRateView.swift */; };
-		CB87634D275E50D300CC8994 /* BackButtonInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876336275E50D300CC8994 /* BackButtonInformationRateView.swift */; };
-		CB87634E275E50D300CC8994 /* BulletInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876337275E50D300CC8994 /* BulletInformationRateView.swift */; };
-		CB87634F275E50D300CC8994 /* TariffCellInfRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876339275E50D300CC8994 /* TariffCellInfRateView.swift */; };
-		CB876350275E50D300CC8994 /* TariffInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87633A275E50D300CC8994 /* TariffInformationRateView.swift */; };
-		CB876351275E50D300CC8994 /* BalanceInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87633B275E50D300CC8994 /* BalanceInformationRateView.swift */; };
-		CB876352275E50D300CC8994 /* CellViewHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87633D275E50D300CC8994 /* CellViewHeaderType.swift */; };
-		CB876353275E50D300CC8994 /* CellViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87633E275E50D300CC8994 /* CellViewType.swift */; };
-		CB876354275E50D300CC8994 /* StaticTextInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87633F275E50D300CC8994 /* StaticTextInformationRateView.swift */; };
-		CB876355275E50D300CC8994 /* HeaderInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876340275E50D300CC8994 /* HeaderInformationRateView.swift */; };
-		CB876356275E50D300CC8994 /* InformationRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876341275E50D300CC8994 /* InformationRateViewController.swift */; };
-		CB876357275E50D300CC8994 /* InformationRateInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876343275E50D300CC8994 /* InformationRateInterfaces.swift */; };
-		CB876358275E50D300CC8994 /* InformationRateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876345275E50D300CC8994 /* InformationRateInteractor.swift */; };
-		CB876359275E50D300CC8994 /* InformationRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876347275E50D300CC8994 /* InformationRateRouter.swift */; };
 		CB876360275E511B00CC8994 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635C275E511B00CC8994 /* NetworkService.swift */; };
 		CB876361275E511B00CC8994 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635D275E511B00CC8994 /* LocalService.swift */; };
 		CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */; };
 		CB876363275E511B00CC8994 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635F275E511B00CC8994 /* DataFetcher.swift */; };
+		CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB82767AA8B00342297 /* KMInformation.json */; };
+		CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB92767AA8B00342297 /* KOInformation.json */; };
+		CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBA2767AA8B00342297 /* GetRate.json */; };
+		CBAC6FC02767AA8B00342297 /* BTInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBB2767AA8B00342297 /* BTInformation.json */; };
+		CBAC6FC12767AA8B00342297 /* KVCInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBC2767AA8B00342297 /* KVCInformation.json */; };
+		CBAC6FEB2767AAD000342297 /* InformationRatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC52767AAD000342297 /* InformationRatePresenter.swift */; };
+		CBAC6FEC2767AAD000342297 /* CreateViewFromCellsInformationRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC72767AAD000342297 /* CreateViewFromCellsInformationRate.swift */; };
+		CBAC6FED2767AAD000342297 /* CrateInformationRateViewFromCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC82767AAD000342297 /* CrateInformationRateViewFromCell.swift */; };
+		CBAC6FEE2767AAD000342297 /* RateCalculateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */; };
+		CBAC6FEF2767AAD000342297 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCB2767AAD000342297 /* NoteModel.swift */; };
+		CBAC6FF02767AAD000342297 /* InformationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */; };
+		CBAC6FF12767AAD000342297 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCD2767AAD000342297 /* RateModel.swift */; };
+		CBAC6FF22767AAD000342297 /* TariffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCE2767AAD000342297 /* TariffColor.swift */; };
+		CBAC6FF32767AAD000342297 /* RateInforamationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */; };
+		CBAC6FF42767AAD000342297 /* ButtonRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */; };
+		CBAC6FF52767AAD000342297 /* BackButtonInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */; };
+		CBAC6FF62767AAD000342297 /* BulletInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */; };
+		CBAC6FF92767AAD000342297 /* BalanceInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */; };
+		CBAC6FFA2767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */; };
+		CBAC6FFB2767AAD000342297 /* StaticTextInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */; };
+		CBAC6FFC2767AAD000342297 /* HeaderInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */; };
+		CBAC6FFD2767AAD000342297 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDD2767AAD000342297 /* ViewType.swift */; };
+		CBAC6FFE2767AAD000342297 /* CellViewHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDF2767AAD000342297 /* CellViewHeaderType.swift */; };
+		CBAC6FFF2767AAD000342297 /* CellViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE02767AAD000342297 /* CellViewType.swift */; };
+		CBAC70002767AAD000342297 /* InformationRateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE12767AAD000342297 /* InformationRateTableViewController.swift */; };
+		CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */; };
+		CBAC70022767AAD000342297 /* InformationRateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */; };
+		CBAC70032767AAD000342297 /* InformationRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */; };
+		CBAC70042767AAD000342297 /* GetRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE92767AAD000342297 /* GetRate.swift */; };
+		CBAC70052767AAD000342297 /* ChooseRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */; };
+		CBAC70082767AB2500342297 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC70072767AB2500342297 /* CustomProgressBar.swift */; };
+		CBAC700A2767ACCF00342297 /* TariffInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */; };
+		CBF522CE2767B06800914131 /* TariffCellInfRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,34 +63,48 @@
 		CB876309275E4C5C00CC8994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB87630B275E4C5C00CC8994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB876319275E4DAE00CC8994 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		CB87631B275E4E2100CC8994 /* BTInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BTInformation.json; sourceTree = "<group>"; };
 		CB87631D275E4E5B00CC8994 /* StringHightExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringHightExtension.swift; sourceTree = "<group>"; };
 		CB876322275E4F3700CC8994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB876325275E4FA800CC8994 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		CB876327275E4FC200CC8994 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		CB876329275E4FD600CC8994 /* SetupAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAppRouter.swift; sourceTree = "<group>"; };
-		CB87632E275E50D300CC8994 /* InformationRatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRatePresenter.swift; sourceTree = "<group>"; };
-		CB876330275E50D300CC8994 /* InformationRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateModel.swift; sourceTree = "<group>"; };
-		CB876331275E50D300CC8994 /* RateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
-		CB876332275E50D300CC8994 /* TariffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffColor.swift; sourceTree = "<group>"; };
-		CB876335275E50D300CC8994 /* RateInforamationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInforamationRateView.swift; sourceTree = "<group>"; };
-		CB876336275E50D300CC8994 /* BackButtonInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonInformationRateView.swift; sourceTree = "<group>"; };
-		CB876337275E50D300CC8994 /* BulletInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletInformationRateView.swift; sourceTree = "<group>"; };
-		CB876339275E50D300CC8994 /* TariffCellInfRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffCellInfRateView.swift; sourceTree = "<group>"; };
-		CB87633A275E50D300CC8994 /* TariffInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffInformationRateView.swift; sourceTree = "<group>"; };
-		CB87633B275E50D300CC8994 /* BalanceInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceInformationRateView.swift; sourceTree = "<group>"; };
-		CB87633D275E50D300CC8994 /* CellViewHeaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewHeaderType.swift; sourceTree = "<group>"; };
-		CB87633E275E50D300CC8994 /* CellViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewType.swift; sourceTree = "<group>"; };
-		CB87633F275E50D300CC8994 /* StaticTextInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTextInformationRateView.swift; sourceTree = "<group>"; };
-		CB876340275E50D300CC8994 /* HeaderInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInformationRateView.swift; sourceTree = "<group>"; };
-		CB876341275E50D300CC8994 /* InformationRateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateViewController.swift; sourceTree = "<group>"; };
-		CB876343275E50D300CC8994 /* InformationRateInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInterfaces.swift; sourceTree = "<group>"; };
-		CB876345275E50D300CC8994 /* InformationRateInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInteractor.swift; sourceTree = "<group>"; };
-		CB876347275E50D300CC8994 /* InformationRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateRouter.swift; sourceTree = "<group>"; };
 		CB87635C275E511B00CC8994 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CB87635D275E511B00CC8994 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformatioDataFetcherService.swift; sourceTree = "<group>"; };
 		CB87635F275E511B00CC8994 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		CBAC6FB82767AA8B00342297 /* KMInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KMInformation.json; sourceTree = "<group>"; };
+		CBAC6FB92767AA8B00342297 /* KOInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KOInformation.json; sourceTree = "<group>"; };
+		CBAC6FBA2767AA8B00342297 /* GetRate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetRate.json; sourceTree = "<group>"; };
+		CBAC6FBB2767AA8B00342297 /* BTInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BTInformation.json; sourceTree = "<group>"; };
+		CBAC6FBC2767AA8B00342297 /* KVCInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KVCInformation.json; sourceTree = "<group>"; };
+		CBAC6FC52767AAD000342297 /* InformationRatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRatePresenter.swift; sourceTree = "<group>"; };
+		CBAC6FC72767AAD000342297 /* CreateViewFromCellsInformationRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewFromCellsInformationRate.swift; sourceTree = "<group>"; };
+		CBAC6FC82767AAD000342297 /* CrateInformationRateViewFromCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrateInformationRateViewFromCell.swift; sourceTree = "<group>"; };
+		CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateCalculateModel.swift; sourceTree = "<group>"; };
+		CBAC6FCB2767AAD000342297 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateModel.swift; sourceTree = "<group>"; };
+		CBAC6FCD2767AAD000342297 /* RateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
+		CBAC6FCE2767AAD000342297 /* TariffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffColor.swift; sourceTree = "<group>"; };
+		CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInforamationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSelectButtonInformationRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTextInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FDD2767AAD000342297 /* ViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
+		CBAC6FDF2767AAD000342297 /* CellViewHeaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewHeaderType.swift; sourceTree = "<group>"; };
+		CBAC6FE02767AAD000342297 /* CellViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewType.swift; sourceTree = "<group>"; };
+		CBAC6FE12767AAD000342297 /* InformationRateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateTableViewController.swift; sourceTree = "<group>"; };
+		CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInterfaces.swift; sourceTree = "<group>"; };
+		CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInteractor.swift; sourceTree = "<group>"; };
+		CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateRouter.swift; sourceTree = "<group>"; };
+		CBAC6FE92767AAD000342297 /* GetRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRate.swift; sourceTree = "<group>"; };
+		CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseRateRouter.swift; sourceTree = "<group>"; };
+		CBAC70072767AB2500342297 /* CustomProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
+		CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffCellInfRateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8762FC275E4C5900CC8994 /* InformationViewWithRate */,
-				CB87632B275E50D300CC8994 /* Modules */,
-				CB87635A275E511B00CC8994 /* Managers */,
 				CB8762FB275E4C5900CC8994 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -115,6 +141,9 @@
 				CB876311275E4CAB00CC8994 /* Assets */,
 				CB87631F275E4E6A00CC8994 /* Extensions */,
 				CB876320275E4F0100CC8994 /* App */,
+				CBAC6FC22767AAD000342297 /* Modules */,
+				CBAC70062767AB2500342297 /* UICustomElements */,
+				CB87635A275E511B00CC8994 /* Managers */,
 			);
 			path = InformationViewWithRate;
 			sourceTree = "<group>";
@@ -148,7 +177,11 @@
 		CB87631A275E4DCB00CC8994 /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
-				CB87631B275E4E2100CC8994 /* BTInformation.json */,
+				CBAC6FBB2767AA8B00342297 /* BTInformation.json */,
+				CBAC6FBA2767AA8B00342297 /* GetRate.json */,
+				CBAC6FB82767AA8B00342297 /* KMInformation.json */,
+				CBAC6FB92767AA8B00342297 /* KOInformation.json */,
+				CBAC6FBC2767AA8B00342297 /* KVCInformation.json */,
 			);
 			path = JSONs;
 			sourceTree = "<group>";
@@ -191,111 +224,6 @@
 			path = AppSettings;
 			sourceTree = "<group>";
 		};
-		CB87632B275E50D300CC8994 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				CB87632C275E50D300CC8994 /* InformationRate */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		CB87632C275E50D300CC8994 /* InformationRate */ = {
-			isa = PBXGroup;
-			children = (
-				CB87632D275E50D300CC8994 /* Presenter */,
-				CB87632F275E50D300CC8994 /* Models */,
-				CB876333275E50D300CC8994 /* View */,
-				CB876342275E50D300CC8994 /* Protocols */,
-				CB876344275E50D300CC8994 /* Interactor */,
-				CB876346275E50D300CC8994 /* Router */,
-			);
-			path = InformationRate;
-			sourceTree = "<group>";
-		};
-		CB87632D275E50D300CC8994 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				CB87632E275E50D300CC8994 /* InformationRatePresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CB87632F275E50D300CC8994 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				CB876330275E50D300CC8994 /* InformationRateModel.swift */,
-				CB876331275E50D300CC8994 /* RateModel.swift */,
-				CB876332275E50D300CC8994 /* TariffColor.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CB876333275E50D300CC8994 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CB876341275E50D300CC8994 /* InformationRateViewController.swift */,
-				CB876334275E50D300CC8994 /* Cells */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CB876334275E50D300CC8994 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				CB87633C275E50D300CC8994 /* CellViewType */,
-				CB876340275E50D300CC8994 /* HeaderInformationRateView.swift */,
-				CB87633F275E50D300CC8994 /* StaticTextInformationRateView.swift */,
-				CB876337275E50D300CC8994 /* BulletInformationRateView.swift */,
-				CB876338275E50D300CC8994 /* TariffView */,
-				CB876335275E50D300CC8994 /* RateInforamationRateView.swift */,
-				CB87633B275E50D300CC8994 /* BalanceInformationRateView.swift */,
-				CB876336275E50D300CC8994 /* BackButtonInformationRateView.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		CB876338275E50D300CC8994 /* TariffView */ = {
-			isa = PBXGroup;
-			children = (
-				CB876339275E50D300CC8994 /* TariffCellInfRateView.swift */,
-				CB87633A275E50D300CC8994 /* TariffInformationRateView.swift */,
-			);
-			path = TariffView;
-			sourceTree = "<group>";
-		};
-		CB87633C275E50D300CC8994 /* CellViewType */ = {
-			isa = PBXGroup;
-			children = (
-				CB87633D275E50D300CC8994 /* CellViewHeaderType.swift */,
-				CB87633E275E50D300CC8994 /* CellViewType.swift */,
-			);
-			path = CellViewType;
-			sourceTree = "<group>";
-		};
-		CB876342275E50D300CC8994 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				CB876343275E50D300CC8994 /* InformationRateInterfaces.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		CB876344275E50D300CC8994 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				CB876345275E50D300CC8994 /* InformationRateInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		CB876346275E50D300CC8994 /* Router */ = {
-			isa = PBXGroup;
-			children = (
-				CB876347275E50D300CC8994 /* InformationRateRouter.swift */,
-			);
-			path = Router;
-			sourceTree = "<group>";
-		};
 		CB87635A275E511B00CC8994 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +241,152 @@
 				CB87635F275E511B00CC8994 /* DataFetcher.swift */,
 			);
 			path = FetchService;
+			sourceTree = "<group>";
+		};
+		CBAC6FC22767AAD000342297 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FE82767AAD000342297 /* Plug */,
+				CBAC6FC32767AAD000342297 /* InformationRate */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CBAC6FC32767AAD000342297 /* InformationRate */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FC42767AAD000342297 /* Presenter */,
+				CBAC6FCF2767AAD000342297 /* View */,
+				CBAC6FE22767AAD000342297 /* Protocols */,
+				CBAC6FE42767AAD000342297 /* Interactor */,
+				CBAC6FE62767AAD000342297 /* Router */,
+				CBAC6FC92767AAD000342297 /* Models */,
+			);
+			path = InformationRate;
+			sourceTree = "<group>";
+		};
+		CBAC6FC42767AAD000342297 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FC52767AAD000342297 /* InformationRatePresenter.swift */,
+				CBAC6FC62767AAD000342297 /* CreateViewFromCells */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CBAC6FC62767AAD000342297 /* CreateViewFromCells */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FC72767AAD000342297 /* CreateViewFromCellsInformationRate.swift */,
+				CBAC6FC82767AAD000342297 /* CrateInformationRateViewFromCell.swift */,
+			);
+			path = CreateViewFromCells;
+			sourceTree = "<group>";
+		};
+		CBAC6FC92767AAD000342297 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */,
+				CBAC6FCB2767AAD000342297 /* NoteModel.swift */,
+				CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */,
+				CBAC6FCD2767AAD000342297 /* RateModel.swift */,
+				CBAC6FCE2767AAD000342297 /* TariffColor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBAC6FCF2767AAD000342297 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FE12767AAD000342297 /* InformationRateTableViewController.swift */,
+				CBAC6FDC2767AAD000342297 /* TypesView */,
+				CBAC6FD02767AAD000342297 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CBAC6FD02767AAD000342297 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */,
+				CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */,
+				CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */,
+				CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */,
+				CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */,
+				CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */,
+				CBAC6FD52767AAD000342297 /* TariffView */,
+				CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */,
+				CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CBAC6FD52767AAD000342297 /* TariffView */ = {
+			isa = PBXGroup;
+			children = (
+				CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */,
+				CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */,
+			);
+			path = TariffView;
+			sourceTree = "<group>";
+		};
+		CBAC6FDC2767AAD000342297 /* TypesView */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FDD2767AAD000342297 /* ViewType.swift */,
+				CBAC6FDE2767AAD000342297 /* CellViewType */,
+			);
+			path = TypesView;
+			sourceTree = "<group>";
+		};
+		CBAC6FDE2767AAD000342297 /* CellViewType */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FDF2767AAD000342297 /* CellViewHeaderType.swift */,
+				CBAC6FE02767AAD000342297 /* CellViewType.swift */,
+			);
+			path = CellViewType;
+			sourceTree = "<group>";
+		};
+		CBAC6FE22767AAD000342297 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CBAC6FE42767AAD000342297 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		CBAC6FE62767AAD000342297 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CBAC6FE82767AAD000342297 /* Plug */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FE92767AAD000342297 /* GetRate.swift */,
+				CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */,
+			);
+			path = Plug;
+			sourceTree = "<group>";
+		};
+		CBAC70062767AB2500342297 /* UICustomElements */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC70072767AB2500342297 /* CustomProgressBar.swift */,
+			);
+			path = UICustomElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +447,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB87631C275E4E2100CC8994 /* BTInformation.json in Resources */,
+				CBAC6FC02767AA8B00342297 /* BTInformation.json in Resources */,
+				CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */,
+				CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */,
 				CB87630A275E4C5C00CC8994 /* LaunchScreen.storyboard in Resources */,
+				CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */,
 				CB876307275E4C5C00CC8994 /* Assets.xcassets in Resources */,
+				CBAC6FC12767AA8B00342297 /* KVCInformation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,35 +464,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBAC700A2767ACCF00342297 /* TariffInformationRateView.swift in Sources */,
+				CBAC6FF92767AAD000342297 /* BalanceInformationRateView.swift in Sources */,
+				CBAC6FEC2767AAD000342297 /* CreateViewFromCellsInformationRate.swift in Sources */,
+				CBAC6FF12767AAD000342297 /* RateModel.swift in Sources */,
+				CBAC70022767AAD000342297 /* InformationRateInteractor.swift in Sources */,
+				CBAC6FF42767AAD000342297 /* ButtonRateCell.swift in Sources */,
+				CBAC70002767AAD000342297 /* InformationRateTableViewController.swift in Sources */,
+				CBAC6FFB2767AAD000342297 /* StaticTextInformationRateView.swift in Sources */,
+				CBAC6FEF2767AAD000342297 /* NoteModel.swift in Sources */,
+				CBAC70042767AAD000342297 /* GetRate.swift in Sources */,
+				CBAC6FF32767AAD000342297 /* RateInforamationRateView.swift in Sources */,
+				CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */,
 				CB876328275E4FC200CC8994 /* AppViewController.swift in Sources */,
+				CBF522CE2767B06800914131 /* TariffCellInfRateView.swift in Sources */,
+				CBAC70082767AB2500342297 /* CustomProgressBar.swift in Sources */,
 				CB87632A275E4FD600CC8994 /* SetupAppRouter.swift in Sources */,
+				CBAC6FFF2767AAD000342297 /* CellViewType.swift in Sources */,
+				CBAC6FFA2767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift in Sources */,
+				CBAC6FED2767AAD000342297 /* CrateInformationRateViewFromCell.swift in Sources */,
+				CBAC6FFD2767AAD000342297 /* ViewType.swift in Sources */,
 				CB876361275E511B00CC8994 /* LocalService.swift in Sources */,
-				CB876351275E50D300CC8994 /* BalanceInformationRateView.swift in Sources */,
+				CBAC6FFC2767AAD000342297 /* HeaderInformationRateView.swift in Sources */,
+				CBAC6FEB2767AAD000342297 /* InformationRatePresenter.swift in Sources */,
 				CB8762FE275E4C5900CC8994 /* AppDelegate.swift in Sources */,
-				CB87634C275E50D300CC8994 /* RateInforamationRateView.swift in Sources */,
-				CB876355275E50D300CC8994 /* HeaderInformationRateView.swift in Sources */,
-				CB876359275E50D300CC8994 /* InformationRateRouter.swift in Sources */,
-				CB87634F275E50D300CC8994 /* TariffCellInfRateView.swift in Sources */,
 				CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */,
-				CB876353275E50D300CC8994 /* CellViewType.swift in Sources */,
-				CB876348275E50D300CC8994 /* InformationRatePresenter.swift in Sources */,
-				CB876354275E50D300CC8994 /* StaticTextInformationRateView.swift in Sources */,
-				CB876349275E50D300CC8994 /* InformationRateModel.swift in Sources */,
-				CB876356275E50D300CC8994 /* InformationRateViewController.swift in Sources */,
-				CB87634D275E50D300CC8994 /* BackButtonInformationRateView.swift in Sources */,
-				CB876350275E50D300CC8994 /* TariffInformationRateView.swift in Sources */,
 				CB876300275E4C5900CC8994 /* SceneDelegate.swift in Sources */,
-				CB876357275E50D300CC8994 /* InformationRateInterfaces.swift in Sources */,
+				CBAC6FF62767AAD000342297 /* BulletInformationRateView.swift in Sources */,
+				CBAC6FF22767AAD000342297 /* TariffColor.swift in Sources */,
 				CB876323275E4F3700CC8994 /* ViewController.swift in Sources */,
-				CB87634A275E50D300CC8994 /* RateModel.swift in Sources */,
 				CB876326275E4FA800CC8994 /* AppRouter.swift in Sources */,
 				CB87631E275E4E5B00CC8994 /* StringHightExtension.swift in Sources */,
 				CB876363275E511B00CC8994 /* DataFetcher.swift in Sources */,
-				CB876352275E50D300CC8994 /* CellViewHeaderType.swift in Sources */,
-				CB87634B275E50D300CC8994 /* TariffColor.swift in Sources */,
-				CB87634E275E50D300CC8994 /* BulletInformationRateView.swift in Sources */,
+				CBAC70032767AAD000342297 /* InformationRateRouter.swift in Sources */,
+				CBAC6FF52767AAD000342297 /* BackButtonInformationRateView.swift in Sources */,
+				CBAC6FEE2767AAD000342297 /* RateCalculateModel.swift in Sources */,
+				CBAC6FF02767AAD000342297 /* InformationRateModel.swift in Sources */,
+				CBAC70052767AAD000342297 /* ChooseRateRouter.swift in Sources */,
+				CBAC6FFE2767AAD000342297 /* CellViewHeaderType.swift in Sources */,
 				CB876360275E511B00CC8994 /* NetworkService.swift in Sources */,
-				CB876358275E50D300CC8994 /* InformationRateInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

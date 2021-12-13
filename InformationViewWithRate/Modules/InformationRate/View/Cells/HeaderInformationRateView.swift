@@ -1,6 +1,6 @@
 //
-//  HeaderInformationRateView.swift
-//  FirstStep
+//  HeaderIRView.swift
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 04.12.2021.
 //

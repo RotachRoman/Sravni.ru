@@ -1,6 +1,6 @@
 //
 //  InformationRateTableViewController.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 09.12.2021.
 //

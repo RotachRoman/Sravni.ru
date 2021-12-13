@@ -1,6 +1,6 @@
 //
-//  BezierInformationRateView.swift
-//  FirstStep
+//  TariffInformationRateView.swift
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 28.11.2021.
 //

@@ -16,9 +16,9 @@ final class TariffCellInfRateView: CellViewHeaderType {
     private var expensivelyBezier: TariffInformationRateView!
     
     //    MARK: - init -
-    init(header: String, cheaperTariff: TariffInformationRateView, cheaperTariff: TariffInformationRateView) {
-        self.cheaperBezier = cheaperBezier
-        self.expensivelyBezier = expensivelyBezier
+    init(header: String, cheaperTariff: TariffInformationRateView, expensivelyTariff: TariffInformationRateView) {
+        self.cheaperBezier = cheaperTariff
+        self.expensivelyBezier = expensivelyTariff
         
         cheaperBezier.translatesAutoresizingMaskIntoConstraints = false
         expensivelyBezier.translatesAutoresizingMaskIntoConstraints = false

@@ -1,6 +1,6 @@
 //
 //  BackButtonInformationRateView.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 04.12.2021.
 //

@@ -1,6 +1,6 @@
 //
 //  HeaderSelectButtonInformationRateCell.swift
-//  FirstStep
+//  InformationViewWithRate
 //
 //  Created by Rotach Roman on 12.12.2021.
 //
