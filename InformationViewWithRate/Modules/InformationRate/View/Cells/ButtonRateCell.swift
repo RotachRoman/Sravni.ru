@@ -117,17 +117,34 @@ class ButtonRateCell: CellViewType {
         let defaultConstant: CGFloat = 16
         
         super.addConstraints()
-
-            NSLayoutConstraint.activate([
-                strokeView.centerYAnchor.constraint(equalTo: layerView.centerYAnchor),
-                strokeView.trailingAnchor.constraint(equalTo: layerView.trailingAnchor, constant: -27),
+        
+        let titleBottomConstraint = title.bottomAnchor.constraint(equalTo: layerView.bottomAnchor, constant: -20)
+        titleBottomConstraint.priority = UILayoutPriority(100)
+        titleBottomConstraint.isActive = true
+        
+        let titleTopConstraint = title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 20)
+        titleTopConstraint.priority = UILayoutPriority(100)
+        titleTopConstraint.isActive = true
+        
+        
+        NSLayoutConstraint.activate([
+            layerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: defaultConstant),
+            layerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: defaultConstant),
+            layerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            layerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -defaultConstant),
+            
+            strokeView.centerYAnchor.constraint(equalTo: layerView.centerYAnchor),
+            strokeView.trailingAnchor.constraint(equalTo: layerView.trailingAnchor, constant: -27),
+            
+            title.leadingAnchor.constraint(equalTo: layerView.leadingAnchor, constant: defaultConstant),
+            title.trailingAnchor.constraint(lessThanOrEqualTo: strokeView.leadingAnchor, constant: -20)
             ])
         
         if rateSelection.text != "" {
+            titleBottomConstraint.isActive = false
+            titleTopConstraint.isActive = false
             NSLayoutConstraint.activate([
-                title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 10),
-                title.leadingAnchor.constraint(equalTo: layerView.leadingAnchor, constant: defaultConstant),
-                title.trailingAnchor.constraint(lessThanOrEqualTo: strokeView.leadingAnchor, constant: -20)
+                title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 10)
             ])
             
             NSLayoutConstraint.activate([
@@ -136,21 +153,7 @@ class ButtonRateCell: CellViewType {
                 rateSelection.bottomAnchor.constraint(equalTo: layerView.bottomAnchor, constant: -10),
                 rateSelection.trailingAnchor.constraint(equalTo: strokeView.leadingAnchor, constant: -20),
             ])
-        } else {
-            NSLayoutConstraint.activate([
-                title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 20),
-                title.leadingAnchor.constraint(equalTo: layerView.leadingAnchor, constant: defaultConstant),
-                title.bottomAnchor.constraint(equalTo: layerView.bottomAnchor, constant: -20),
-                title.trailingAnchor.constraint(lessThanOrEqualTo: strokeView.leadingAnchor, constant: -20)
-            ])
         }
-        
-        NSLayoutConstraint.activate([
-            layerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: defaultConstant),
-            layerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: defaultConstant),
-            layerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            layerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -defaultConstant),
-            ])
     }
 }
 
