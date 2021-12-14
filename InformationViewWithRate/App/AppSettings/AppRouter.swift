@@ -11,7 +11,7 @@ protocol AppRouterType {
     func startApplication()
 }
 
-@available(iOS 10.0, *)
+@available(iOS 12.0, *)
 final class AppRouter {
     private let appViewController: AppViewControllerType
     private let fetchService: InformatioDataFetcherServiceType
@@ -30,13 +30,13 @@ final class AppRouter {
     
 }
 
-@available(iOS 10.0, *)
+@available(iOS 12.0, *)
 extension AppRouter: AppRouterType {
     func startApplication() {
         self.routeToSplash()
     }
 }
 
-@available(iOS 10.0, *)
+@available(iOS 12.0, *)
 extension AppRouter: InformationRateRouterDelegate { }
 

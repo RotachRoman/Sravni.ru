@@ -29,6 +29,7 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     }
 }
 
+@available(iOS 12.0, *)
 extension InformationRateRouter: InformationRateRouterType {
     
     func startModule() {
@@ -41,12 +42,14 @@ extension InformationRateRouter: InformationRateRouterType {
     }
 }
 
+@available(iOS 12.0, *)
 extension InformationRateRouter: IRTRouterStartWithSelectedRateProtocol {
     func addSelectedRate(title: String, urlString: String){
         self.presenter?.changeRate(title: title, urlString: urlString)
     }
 }
 
+@available(iOS 12.0, *)
 extension InformationRateRouter: InformationRatePresenterRouterDelegate {
     func chooseRate(nameRate: String) {
         let _ = ChooseRateRouter(nameRate: nameRate, backRouter: self)

@@ -34,6 +34,7 @@ final class InformationRatePresenter {
 }
 
 // MARK: - Extensions -
+@available(iOS 12.0, *)
 extension InformationRatePresenter: InformationRatePresenterType {
     func onInformationRatePresenter(on informationRateView: InformationRateViewControllerType){
         self.view = informationRateView
@@ -41,18 +42,21 @@ extension InformationRatePresenter: InformationRatePresenterType {
     }
 }
 
+@available(iOS 12.0, *)
 extension InformationRatePresenter: СhangeRatePresenterType {
     func changeRate(nameRate name: String) {
         self.routerDelegate?.chooseRate(nameRate: name)
     }
 }
 
+@available(iOS 12.0, *)
 extension InformationRatePresenter: AddRatePresenterType {
     func changeRate(title: String, urlString: String) {
         interactor.changeRate(title: title, urlString: urlString)
     }
 }
 
+@available(iOS 12.0, *)
 extension InformationRatePresenter: InformationRateInteractorDelegate {
 //    Получение данных и отрисовка вью
     func onInformationRateFetched(informationRate: InformationRate) {
