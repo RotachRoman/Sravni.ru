@@ -48,7 +48,6 @@
 		CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */; };
 		CBAC70022767AAD000342297 /* InformationRateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */; };
 		CBAC70032767AAD000342297 /* InformationRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */; };
-		CBAC70042767AAD000342297 /* GetRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE92767AAD000342297 /* GetRate.swift */; };
 		CBAC70052767AAD000342297 /* ChooseRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */; };
 		CBAC70082767AB2500342297 /* CustomProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC70072767AB2500342297 /* CustomProgressBar.swift */; };
 		CBAC700A2767ACCF00342297 /* TariffInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */; };
@@ -101,7 +100,6 @@
 		CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInterfaces.swift; sourceTree = "<group>"; };
 		CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInteractor.swift; sourceTree = "<group>"; };
 		CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateRouter.swift; sourceTree = "<group>"; };
-		CBAC6FE92767AAD000342297 /* GetRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRate.swift; sourceTree = "<group>"; };
 		CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseRateRouter.swift; sourceTree = "<group>"; };
 		CBAC70072767AB2500342297 /* CustomProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgressBar.swift; sourceTree = "<group>"; };
 		CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffCellInfRateView.swift; sourceTree = "<group>"; };
@@ -375,7 +373,6 @@
 		CBAC6FE82767AAD000342297 /* Plug */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FE92767AAD000342297 /* GetRate.swift */,
 				CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */,
 			);
 			path = Plug;
@@ -473,7 +470,6 @@
 				CBAC70002767AAD000342297 /* InformationRateTableViewController.swift in Sources */,
 				CBAC6FFB2767AAD000342297 /* StaticTextInformationRateView.swift in Sources */,
 				CBAC6FEF2767AAD000342297 /* NoteModel.swift in Sources */,
-				CBAC70042767AAD000342297 /* GetRate.swift in Sources */,
 				CBAC6FF32767AAD000342297 /* RateInforamationRateView.swift in Sources */,
 				CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */,
 				CB876328275E4FC200CC8994 /* AppViewController.swift in Sources */,

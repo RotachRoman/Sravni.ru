@@ -53,9 +53,6 @@ class TariffInformationRateView: ViewType {
         fontDescriptor = fontDescriptor.addingAttributes([.featureSettings: fontFeatures])
         label.font = UIFont(descriptor: fontDescriptor, size: 11)
         label.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.kern: 0.5, .paragraphStyle: paragraphStyle])
-//        MARK: - Сделать нормально атрибьют
-//        label.text = nil
-        
         return label
     }()
     private lazy var ratioLabel: UILabel = {

@@ -34,7 +34,6 @@ extension InformationRateInteractor: InformationRateInteractorType {
         }
     }
     
-    
 //    Меняем Rate после выбора коэффициента пользователем
     func changeRate(title: String, urlString: String) {
         fetchRate(urlString: urlString) { [weak self] rate in

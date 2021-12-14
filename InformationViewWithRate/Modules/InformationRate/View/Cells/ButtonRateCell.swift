@@ -82,8 +82,6 @@ class ButtonRateCell: CellViewType {
         self.title.text = title
     }
     
-    
-    
     private func setupFunctionLayerView(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.chooseRate(_:)))
         self.layerView.addGestureRecognizer(tap)
@@ -119,21 +117,12 @@ class ButtonRateCell: CellViewType {
         let defaultConstant: CGFloat = 16
         
         super.addConstraints()
-        
-        NSLayoutConstraint.activate([
-            layerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: defaultConstant),
-            layerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: defaultConstant),
-            layerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            layerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -defaultConstant),
-            ])
-        
+
             NSLayoutConstraint.activate([
-//                strokeView.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 27),
                 strokeView.centerYAnchor.constraint(equalTo: layerView.centerYAnchor),
                 strokeView.trailingAnchor.constraint(equalTo: layerView.trailingAnchor, constant: -27),
             ])
         
-//        print(self.rateSelection.text)
         if rateSelection.text != "" {
             NSLayoutConstraint.activate([
                 title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 10),
@@ -155,6 +144,13 @@ class ButtonRateCell: CellViewType {
                 title.trailingAnchor.constraint(lessThanOrEqualTo: strokeView.leadingAnchor, constant: -20)
             ])
         }
+        
+        NSLayoutConstraint.activate([
+            layerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: defaultConstant),
+            layerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: defaultConstant),
+            layerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            layerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -defaultConstant),
+            ])
     }
 }
 

@@ -19,7 +19,6 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     
 //    MARK: weak var ошибка  'weak' must not be applied to non-class-bound 'InformatioDataFetcherServiceType'; consider adding a protocol conformance that has a class bound
     private var fetchService: InformatioDataFetcherServiceType
-//    private weak var
     private let aboutInformationName: String!
     
     init(appViewController: AppViewControllerType, routerDelegate: InformationRateRouterDelegate, fetchService: InformatioDataFetcherServiceType) {
@@ -51,13 +50,5 @@ extension InformationRateRouter: IRTRouterStartWithSelectedRateProtocol {
 extension InformationRateRouter: InformationRatePresenterRouterDelegate {
     func chooseRate(nameRate: String) {
         let _ = ChooseRateRouter(nameRate: nameRate, backRouter: self)
-//        viewController
     }
 }
-
-//extension InformationRateRouter: RateGettingRouterType {
-//    func returnRate(completionRate: @escaping (Double?) -> ()) {
-//
-//    }
-    
-    
