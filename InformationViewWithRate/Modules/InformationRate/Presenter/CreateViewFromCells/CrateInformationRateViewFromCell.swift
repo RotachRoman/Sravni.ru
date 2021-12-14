@@ -72,12 +72,20 @@ final class CrateInformationRateViewFromCell: CreateInformationRateCellAlgoritm 
     }
     
     override func addRateInformation() -> CellViewType? {
-        guard let _ = informationRate.rate?[0].rateCount else { return nil }
-//        Поскольку Presenter отвечает за предстваление переменных во вью, то мы высчитываем здесь коэффициент пользователя
-        var currency: Double = 0
-        for rate in informationRate.rate! {
-            currency += rate.rateCount ?? 0
+        guard let infoRate = informationRate.rate else { return nil }
+//        ?[0].rateCount
+        //        Поскольку Presenter отвечает за предстваление переменных во вью, то мы высчитываем здесь коэффициент пользователя
+        if let _ = infoRate.first (where: { coefficient in
+            if coefficient.rateCount != nil {
+                return true
+            } else { return false }
+        }) {
+            var currency: Double = 0
+            for rate in informationRate.rate! {
+                currency += rate.rateCount ?? 0
+            }
+            return RateInforamationRateView(nameRate: informationRate.name, rate: String(currency))
         }
-        return RateInforamationRateView(nameRate: informationRate.name, rate: String(currency))
+        return nil
     }
 }

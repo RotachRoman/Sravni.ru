@@ -253,8 +253,8 @@
 		CBAC6FC32767AAD000342297 /* InformationRate */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FCF2767AAD000342297 /* View */,
 				CBAC6FE22767AAD000342297 /* Protocols */,
+				CBAC6FCF2767AAD000342297 /* View */,
 				CBAC6FE42767AAD000342297 /* Interactor */,
 				CBAC6FC42767AAD000342297 /* Presenter */,
 				CBAC6FE62767AAD000342297 /* Router */,
