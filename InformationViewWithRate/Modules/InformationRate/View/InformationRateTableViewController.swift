@@ -13,6 +13,19 @@ final class InformationRateTableViewController: ViewController {
     var presenter: InformationRatePresenterType!
     private var cells: [CellViewType] = []
     
+    //    MARK: - UI elements
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.register(CellViewType.self, forCellReuseIdentifier: String(describing: CellViewType.self))
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.showsVerticalScrollIndicator = false
+        tableView.contentInsetAdjustmentBehavior = .never
+        return tableView
+    }()
+    
+    //MARK: - init -
     init(presenter: InformationRatePresenterType){
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
@@ -22,18 +35,6 @@ final class InformationRateTableViewController: ViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(CellViewType.self, forCellReuseIdentifier: String(describing: CellViewType.self))
-        tableView.dataSource = self
-        tableView.separatorStyle = .none
-        tableView.showsVerticalScrollIndicator = false
-        tableView.contentInsetAdjustmentBehavior = .never
-//        tableView.tableFooterView = UIView()
-        return tableView
-    }()
     
     //MARK: - Setup View -
     override func addSubviews() {
@@ -65,7 +66,7 @@ extension InformationRateTableViewController: UITableViewDataSource {
     }
 }
 
-
+//Вызов из презентора, передача данных
 extension InformationRateTableViewController: InformationRateViewControllerType {
     func onInformationRateFetched(cells: [CellViewType]) {
         self.cells = cells

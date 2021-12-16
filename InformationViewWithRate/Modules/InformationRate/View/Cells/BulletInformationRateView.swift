@@ -11,6 +11,7 @@ import UIKit
 @available(iOS 12.0, *)
 class BulletInformationRateView: CellViewType {
     
+    //    MARK: - UI elements
     private lazy var text: UILabel = {
         let label = UILabel( )
         label.textColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 1)

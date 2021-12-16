@@ -15,16 +15,20 @@ protocol AppRouterType {
 final class AppRouter {
     private let appViewController: AppViewControllerType
     private let fetchService: InformatioDataFetcherServiceType
+    private var editFetchService: EditRateDataFetcherServiceType
     
     private var rateInformRouter: InformationRateRouterType?
+    private let nameInformation: String
     
-    init(appViewController: AppViewControllerType, fetchService: InformatioDataFetcherServiceType) {
+    init(nameInformation: String, appViewController: AppViewControllerType, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {
         self.appViewController = appViewController
         self.fetchService = fetchService
+        self.editFetchService = editFetchService
+        self.nameInformation = nameInformation
     }
     
-    private func routeToSplash() {
-        self.rateInformRouter = InformationRateRouter(appViewController: self.appViewController, routerDelegate: self, fetchService: fetchService)
+    private func routeToView() {
+        self.rateInformRouter = InformationRateRouter(nameInformation: nameInformation, appViewController: self.appViewController, routerDelegate: self, fetchService: fetchService, editFetchService: editFetchService)
         self.rateInformRouter?.startModule()
     }
     
@@ -33,7 +37,7 @@ final class AppRouter {
 @available(iOS 12.0, *)
 extension AppRouter: AppRouterType {
     func startApplication() {
-        self.routeToSplash()
+        self.routeToView()
     }
 }
 

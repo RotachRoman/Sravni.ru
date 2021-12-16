@@ -71,6 +71,7 @@ final class CrateInformationRateViewFromCell: CreateInformationRateCellAlgoritm 
         return cells
     }
     
+    //MARK: - ячейка коэффициента
     override func addRateInformation() -> CellViewType? {
         guard let infoRate = informationRate.rate else { return nil }
         //        Поскольку Presenter отвечает за предстваление переменных во вью, то мы высчитываем здесь коэффициент пользователя

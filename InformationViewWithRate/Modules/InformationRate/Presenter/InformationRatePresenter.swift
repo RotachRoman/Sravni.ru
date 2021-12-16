@@ -25,7 +25,6 @@ final class InformationRatePresenter {
     // MARK: - Lifecycle -
 
     init(interactor: InformationRateInteractorType, routerDelegate: InformationRatePresenterRouterDelegate, nameAboutInformation: String) {
-//        self.view = view
         self.interactor = interactor
         self.routerDelegate = routerDelegate
         self.nameAboutInformation = nameAboutInformation
@@ -34,6 +33,7 @@ final class InformationRatePresenter {
 }
 
 // MARK: - Extensions -
+// загружаем данные для вью
 @available(iOS 12.0, *)
 extension InformationRatePresenter: InformationRatePresenterType {
     func onInformationRatePresenter(on informationRateView: InformationRateViewControllerType){
@@ -42,6 +42,7 @@ extension InformationRatePresenter: InformationRatePresenterType {
     }
 }
 
+// передаем роутеру название ячейки, в которой пользователь хочет поменять коэффициент
 @available(iOS 12.0, *)
 extension InformationRatePresenter: СhangeRatePresenterType {
     func changeRate(nameRate name: String) {
@@ -49,6 +50,7 @@ extension InformationRatePresenter: СhangeRatePresenterType {
     }
 }
 
+// Передает заголовок ячейки в которой меняем коэффициент и ссылку для парсинга
 @available(iOS 12.0, *)
 extension InformationRatePresenter: AddRatePresenterType {
     func changeRate(title: String, urlString: String) {

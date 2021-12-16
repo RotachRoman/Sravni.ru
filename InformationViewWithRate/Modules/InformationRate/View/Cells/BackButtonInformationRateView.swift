@@ -11,6 +11,7 @@ import UIKit
 @available(iOS 12.0, *)
 class BackButtonInformationRateView: CellViewType {
     
+    //    MARK: - UI elements
     private lazy var button: UIButton = {
         let button = UIButton()
         

@@ -13,6 +13,7 @@ import UIKit
 @available(iOS 12.0, *)
 class StaticTextInformationRateView: CellViewHeaderType {
     
+    //    MARK: - UI elements
     private lazy var text: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false

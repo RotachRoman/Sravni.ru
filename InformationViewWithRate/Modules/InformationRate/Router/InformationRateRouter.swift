@@ -10,8 +10,6 @@ import UIKit
 @available(iOS 12.0, *)
 final class InformationRateRouter: InformationRateRouterDelegate {
     
-    private let arrayJSON = ["BT", "KM", "KO", "KVC"]
-    
     private weak var appViewController: AppViewControllerType?
     private weak var routerDelegate: InformationRateRouterDelegate?
     private weak var viewController: UIViewController?
@@ -19,13 +17,15 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     
 //    MARK: weak var ошибка  'weak' must not be applied to non-class-bound 'InformatioDataFetcherServiceType'; consider adding a protocol conformance that has a class bound
     private var fetchService: InformatioDataFetcherServiceType
-    private let aboutInformationName: String!
+    private var editFetchService: EditRateDataFetcherServiceType
+    private let aboutInformationName: String
     
-    init(appViewController: AppViewControllerType, routerDelegate: InformationRateRouterDelegate, fetchService: InformatioDataFetcherServiceType) {
+    init(nameInformation: String, appViewController: AppViewControllerType, routerDelegate: InformationRateRouterDelegate, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {
         self.appViewController = appViewController
         self.routerDelegate = routerDelegate
         self.fetchService = fetchService
-        self.aboutInformationName = self.arrayJSON[3]
+        self.editFetchService = editFetchService
+        self.aboutInformationName = nameInformation
     }
 }
 
@@ -33,7 +33,7 @@ final class InformationRateRouter: InformationRateRouterDelegate {
 extension InformationRateRouter: InformationRateRouterType {
     
     func startModule() {
-        let interactor = InformationRateInteractor(fetchService: fetchService)
+        let interactor = InformationRateInteractor(fetchService: fetchService, editFetchService: editFetchService)
         presenter = InformationRatePresenter(interactor: interactor, routerDelegate: self, nameAboutInformation: aboutInformationName)
         interactor.interatorDelegate = presenter
         let viewController = InformationRateTableViewController(presenter: presenter!)

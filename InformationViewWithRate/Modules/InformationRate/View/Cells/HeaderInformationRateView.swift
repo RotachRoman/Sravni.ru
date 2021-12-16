@@ -12,6 +12,7 @@ import UIKit
 @available(iOS 12.0, *)
 class HeaderInformationRateView: CellViewType {
     
+    //    MARK: - UI elements
     private lazy var arrowView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "Arrow_left")

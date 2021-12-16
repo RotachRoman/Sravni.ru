@@ -33,27 +33,40 @@ class CreateInformationRateCellAlgoritm {
         return BackButtonInformationRateView()
     }
     
+//    заполняется массив ячеек вью для дальнейшего отображения
     final func addCells(informationRate: InformationRate) -> [CellViewType] {
         self.cells = []
         self.informationRate = informationRate
         
-        appendCells(addHeader())
-        appendCells(addStaticText())
-        for bullet in addBulletCell() {
-            appendCells(bullet)
+        [addHeader(), addStaticText()].forEach {
+            appendCells($0)
         }
-        appendCells(addTariffCell())
-        appendCells(addNoteCell())
-        for button in addRateButton() {
-            appendCells(button)
+        addBulletCell().forEach { cell in
+            appendCells(cell)
         }
-        appendCells(addRateInformation())
-        appendCells(addBackButton())
+        [addTariffCell(), addNoteCell()].forEach {
+            appendCells($0)
+        }
+        addRateButton().forEach { cell in
+            appendCells(cell)
+        }
+        [addRateInformation(), addBackButton()].forEach {
+            appendCells($0)
+        }
         return cells
     }
     
+//    чтобы не повторяться в коде, выносим функцию добавления ячеек
     private func appendCells(_ cell: CellViewType?) {
         guard let cell = cell else { return }
         cells.append(cell)
     }
+// Хотел сделать [addHeader(), addStaticText(), arrayCells(addBulletCell)].forEach но не дает, ведь массив в массиве. Можно
+//    private func arrayCells(_ function: () -> [CellViewType]) -> [CellViewType?] {
+//        var cells: [CellViewType?] = []
+//        for view in function() {
+//            cells.append(view)
+//        }
+//        return cells
+//    }
 }

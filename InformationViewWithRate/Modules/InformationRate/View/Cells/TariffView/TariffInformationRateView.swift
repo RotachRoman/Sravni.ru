@@ -15,7 +15,7 @@ class TariffInformationRateView: ViewType {
     private let bezierView: UILabel = UILabel()
     private var backColor: UIColor!
     
-    //    MARK: - View elements
+    //    MARK: - UI elements
     private lazy var capsul: UILabel = {
         let view = UILabel()
         view.layer.cornerRadius = 10
@@ -83,16 +83,12 @@ class TariffInformationRateView: ViewType {
          saleColor: UIColor) {
         super.init()
         commonInit(text: text, ratio: ratio, sale: sale, backgroundColor: backgroundCoolor, saleColor: saleColor)
+        addConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-//    override func layoutSubviews() {
-////        super.layoutSubviews()
-//        setupShadow(view: bezierView)
-//    }
     
     private func commonInit(text: String,
                         ratio: String,

@@ -11,6 +11,7 @@ import UIKit
 @available(iOS 12.0, *)
 class BalanceInformationRateView: CellViewType {
     
+    //    MARK: - UI elements
     private let layerView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.957, green: 0.969, blue: 0.984, alpha: 1)

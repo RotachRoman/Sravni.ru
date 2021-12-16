@@ -11,6 +11,8 @@ import UIKit
 //MARK: Ячейка отображения коэффициента
 @available(iOS 12.0, *)
 class RateInforamationRateView: CellViewType {
+    
+    //    MARK: - UI elements
     private lazy var ourRate: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
