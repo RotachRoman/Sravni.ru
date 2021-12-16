@@ -13,7 +13,7 @@ protocol SetupAppRouterType {
     func getAppRouter() -> AppRouterType?
 }
 
-@available(iOS 10.0, *)
+@available(iOS 12.0, *)
 final class SetupAppRouter: SetupAppRouterType{
     private var window: UIWindow?
     private var appRouter: AppRouterType?
@@ -30,7 +30,9 @@ final class SetupAppRouter: SetupAppRouterType{
     private func setup() {
         let viewController = setupViewController
         let fetchInformationRate = InformatioDataFetcherService()
-        self.appRouter = AppRouter(appViewController: viewController(), fetchService: fetchInformationRate)
+        let editFetchService = EditRateDataFetcherService()
+        let arrayNameInformation = ["BT", "KM", "KO", "KVC"]
+        self.appRouter = AppRouter(nameInformation: arrayNameInformation[1], appViewController: viewController(), fetchService: fetchInformationRate, editFetchService: editFetchService)
         self.appRouter?.startApplication()
     }
     
