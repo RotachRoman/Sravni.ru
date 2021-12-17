@@ -65,6 +65,7 @@ final class CrateInformationRateViewFromCell: CreateInformationRateCellAlgoritm 
         var cells: [CellViewType] = []
         cells.append(HeaderSelectButtonInformationRateCell(header: informationRate.header))
         
+        guard let presenter = presenter else { return []}
         for rate in rates {
             cells.append(ButtonRateCell(presenter: presenter, title: rate.title, rateSelection: rate.selectionName))
         }

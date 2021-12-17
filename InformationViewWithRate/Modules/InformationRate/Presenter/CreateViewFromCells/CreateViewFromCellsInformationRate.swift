@@ -14,7 +14,7 @@ import UIKit
 @available(iOS 12.0, *)
 class CreateInformationRateCellAlgoritm {
     var informationRate: InformationRate!
-    internal var presenter: СhangeRatePresenterType
+    internal weak var presenter: СhangeRatePresenterType?
     
     private var cells: [CellViewType] = []
     
@@ -61,12 +61,4 @@ class CreateInformationRateCellAlgoritm {
         guard let cell = cell else { return }
         cells.append(cell)
     }
-// Хотел сделать [addHeader(), addStaticText(), arrayCells(addBulletCell)].forEach но не дает, ведь массив в массиве. Можно
-//    private func arrayCells(_ function: () -> [CellViewType]) -> [CellViewType?] {
-//        var cells: [CellViewType?] = []
-//        for view in function() {
-//            cells.append(view)
-//        }
-//        return cells
-//    }
 }

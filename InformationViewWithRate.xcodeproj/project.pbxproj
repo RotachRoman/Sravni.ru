@@ -199,7 +199,6 @@
 		CB876320275E4F0100CC8994 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				CB876329275E4FD600CC8994 /* SetupAppRouter.swift */,
 				CB876321275E4F2100CC8994 /* UI */,
 				CB876324275E4F5700CC8994 /* AppSettings */,
 			);
@@ -218,6 +217,7 @@
 		CB876324275E4F5700CC8994 /* AppSettings */ = {
 			isa = PBXGroup;
 			children = (
+				CB876329275E4FD600CC8994 /* SetupAppRouter.swift */,
 				CB8762FD275E4C5900CC8994 /* AppDelegate.swift */,
 				CB8762FF275E4C5900CC8994 /* SceneDelegate.swift */,
 				CB876325275E4FA800CC8994 /* AppRouter.swift */,
