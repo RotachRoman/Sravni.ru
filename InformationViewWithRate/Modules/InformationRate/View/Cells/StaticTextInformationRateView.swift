@@ -18,7 +18,6 @@ class StaticTextInformationRateView: CellViewHeaderType {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 1)
-        label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         var attributedString: [NSAttributedString.Key: Any] = [NSAttributedString.Key.kern: -0.24]
         label.attributedText = NSMutableAttributedString(string: "", attributes: attributedString)
         label.numberOfLines = 0
@@ -29,8 +28,11 @@ class StaticTextInformationRateView: CellViewHeaderType {
     //MARK: - init -
     init(text: String){
         super.init(header: "Как определяется?")
-        let mentionsHighlighted: NSAttributedString = text.wordsHighlighted()
-        self.text.attributedText = mentionsHighlighted
+        
+        let regularAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .regular)]
+        let boldAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .bold)]
+        let changedText = text.changeStyle(startTeg: "&*", endTeg: "*&", normalAttribute: regularAttribute, tegAttribute: boldAttribute)
+        self.text.attributedText = changedText
     }
     
     required init?(coder: NSCoder) {

@@ -33,7 +33,6 @@ class BalanceInformationRateView: CellViewType {
     private lazy var textComponent: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 1)
-        label.font = UIFont(name: "OpenSans-Regular", size: 14)
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineHeightMultiple = 1.05
         label.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.paragraphStyle: paragraphStyle])
@@ -47,7 +46,10 @@ class BalanceInformationRateView: CellViewType {
     init(title: String, text: String){
         super.init()
         self.title.text = title
-        self.textComponent.text = text
+        let regularAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .regular)]
+        let boldAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .bold)]
+        let changedText = text.changeStyle(startTeg: "&*", endTeg: "*&", normalAttribute: regularAttribute, tegAttribute: boldAttribute)
+        self.textComponent.attributedText = changedText
     }
     
     required init?(coder: NSCoder) {
