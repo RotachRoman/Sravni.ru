@@ -142,7 +142,7 @@
 				CB87631F275E4E6A00CC8994 /* Extensions */,
 				CB876320275E4F0100CC8994 /* App */,
 				CBAC6FC22767AAD000342297 /* Modules */,
-				CB87635A275E511B00CC8994 /* Managers */,
+				CB87635A275E511B00CC8994 /* Services */,
 			);
 			path = InformationViewWithRate;
 			sourceTree = "<group>";
@@ -223,12 +223,12 @@
 			path = AppSettings;
 			sourceTree = "<group>";
 		};
-		CB87635A275E511B00CC8994 /* Managers */ = {
+		CB87635A275E511B00CC8994 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				CB87635B275E511B00CC8994 /* FetchService */,
 			);
-			path = Managers;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		CB87635B275E511B00CC8994 /* FetchService */ = {

@@ -53,12 +53,11 @@ class RateInforamationRateView: CellViewType {
     
     override func addConstraints() {
         super.addConstraints()
-        let defaultConstant: CGFloat = 16
         NSLayoutConstraint.activate([
             ourRate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 28),
             ourRate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
-            ourRate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -defaultConstant),
-            ourRate.trailingAnchor.constraint(lessThanOrEqualTo: contentView.trailingAnchor, constant: -12),
+            ourRate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
+            ourRate.trailingAnchor.constraint(lessThanOrEqualTo: rate.trailingAnchor, constant: -12),
             
             rate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 29),
             rate.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
