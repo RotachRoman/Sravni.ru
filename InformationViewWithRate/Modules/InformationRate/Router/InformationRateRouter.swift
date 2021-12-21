@@ -45,9 +45,8 @@ extension InformationRateRouter: InformationRateRouterType {
         self.presenter = InformationRatePresenter(interactor: interactor, routerDelegate: self, nameAboutInformation: aboutInformationName)
         interactor.interatorDelegate = self.presenter!
         let viewController = InformationRateTableViewController(presenter: presenter!)
-        let navigationController = UINavigationController(rootViewController: viewController)
-        self.viewController = navigationController
-        self.appViewController?.updateCurrent(to: navigationController)
+        self.viewController = viewController
+        self.appViewController?.updateCurrent(to: viewController)
     }
     
 }
