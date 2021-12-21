@@ -10,4 +10,5 @@ import Foundation
 struct Rate: Codable {
     let ratio, info: String
     let sale: String?
+    var colors: TariffColor?
 }
