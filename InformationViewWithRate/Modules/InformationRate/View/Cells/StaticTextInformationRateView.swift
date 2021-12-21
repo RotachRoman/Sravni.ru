@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 //MARK: - Ячейка статичного текста
-@available(iOS 12.0, *)
 class StaticTextInformationRateView: CellViewHeaderType {
     
     //    MARK: - UI elements

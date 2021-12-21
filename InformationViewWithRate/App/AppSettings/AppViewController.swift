@@ -11,7 +11,6 @@ protocol AppViewControllerType: AnyObject {
     func updateCurrent(to viewController: UIViewController)
 }
 
-@available(iOS 10.0, *)
 class AppViewController: ViewController {
     private var current: UIViewController?
 }

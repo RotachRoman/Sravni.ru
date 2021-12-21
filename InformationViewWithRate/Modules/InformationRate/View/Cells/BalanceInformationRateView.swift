@@ -8,7 +8,6 @@
 import UIKit
 
 // MARK: - Информационная ячейка "Равновесие"
-@available(iOS 12.0, *)
 class BalanceInformationRateView: CellViewType {
     
     //    MARK: - UI elements

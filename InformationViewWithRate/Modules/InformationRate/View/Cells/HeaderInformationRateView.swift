@@ -7,9 +7,7 @@
 
 import UIKit
 
-
 //  MARK: - header с картинкой и title
-@available(iOS 12.0, *)
 class HeaderInformationRateView: CellViewType {
     
     //    MARK: - UI elements

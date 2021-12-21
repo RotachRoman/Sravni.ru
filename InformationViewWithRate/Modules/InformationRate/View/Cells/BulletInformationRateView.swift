@@ -8,7 +8,6 @@
 import UIKit
 
 //MARK: - Ячейка для списка с буллитами
-@available(iOS 12.0, *)
 class BulletInformationRateView: CellViewType {
     
     //    MARK: - UI elements

@@ -7,13 +7,12 @@
 
 import Foundation
 
-@available(iOS 12.0, *)
 final class InformationRateInteractor {
     private let fetchService: InformatioDataFetcherServiceType
     private let editFetchService: EditRateDataFetcherServiceType
     weak var interatorDelegate: InformationRateInteractorDelegate?
     
-    private var informationRate: InformationRate?
+    private var tariff: InformationTariff?
     
     init(fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType){
         self.fetchService = fetchService
@@ -32,9 +31,9 @@ extension InformationRateInteractor: InformationRateInteractorType {
                 print("Error. informationRate = nil")
                 return
             }
-            self.informationRate = infRate
+            self.tariff = InformationTariff(informationRate: informationRate)
 //            Отправление данных презентеру для дальнейшего отображения
-            self.interatorDelegate?.onInformationRateFetched(informationRate: informationRate)
+            self.interatorDelegate?.onInformationRateFetched(informationTariff: self.tariff!)
         }
     }
     
@@ -46,16 +45,12 @@ extension InformationRateInteractor: InformationRateInteractorType {
                 print("Error. Rate = nil")
                 return
             }
-// поскольку точно будет существовать informationRate и в нем rate, иначе заход сюда невозможен
-            guard let infoRate = self.informationRate?.rate else { return }
-            var index = 0
-            while(infoRate[index].title != title) {
-                index += 1
+            if let row = self.tariff?.informationRate.rate!.firstIndex(where: {$0.title == title}) {
+                self.tariff?.informationRate.rate![row].rateCount = rate.rate
+                self.tariff?.informationRate.rate![row].selectionName = rate.selectionName
             }
-            self.informationRate!.rate![index].rateCount = rate.rate
-            self.informationRate!.rate![index].selectionName = rate.selectionName
 //            Отправление данных презентеру для дальнейшего отображения
-            self.interatorDelegate?.onInformationRateFetched(informationRate: self.informationRate!)
+            self.interatorDelegate?.onInformationRateFetched(informationTariff: self.tariff!)
         }
     }
 }

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 //MARK: Ячейка отображения коэффициента
-@available(iOS 12.0, *)
 class RateInforamationRateView: CellViewType {
     
     //    MARK: - UI elements

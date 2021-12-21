@@ -20,6 +20,8 @@
 		CB876361275E511B00CC8994 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635D275E511B00CC8994 /* LocalService.swift */; };
 		CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */; };
 		CB876363275E511B00CC8994 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635F275E511B00CC8994 /* DataFetcher.swift */; };
+		CB8A6FF72771D9C2005B824E /* TariffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF62771D9C2005B824E /* TariffColor.swift */; };
+		CB8A6FF92771DBD3005B824E /* InformationTariffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */; };
 		CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB82767AA8B00342297 /* KMInformation.json */; };
 		CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB92767AA8B00342297 /* KOInformation.json */; };
 		CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBA2767AA8B00342297 /* GetRate.json */; };
@@ -32,7 +34,6 @@
 		CBAC6FEF2767AAD000342297 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCB2767AAD000342297 /* NoteModel.swift */; };
 		CBAC6FF02767AAD000342297 /* InformationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */; };
 		CBAC6FF12767AAD000342297 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCD2767AAD000342297 /* RateModel.swift */; };
-		CBAC6FF22767AAD000342297 /* TariffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCE2767AAD000342297 /* TariffColor.swift */; };
 		CBAC6FF32767AAD000342297 /* RateInforamationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */; };
 		CBAC6FF42767AAD000342297 /* ButtonRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */; };
 		CBAC6FF52767AAD000342297 /* BackButtonInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */; };
@@ -72,6 +73,8 @@
 		CB87635D275E511B00CC8994 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformatioDataFetcherService.swift; sourceTree = "<group>"; };
 		CB87635F275E511B00CC8994 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
+		CB8A6FF62771D9C2005B824E /* TariffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffColor.swift; sourceTree = "<group>"; };
+		CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTariffModel.swift; sourceTree = "<group>"; };
 		CBAC6FB82767AA8B00342297 /* KMInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KMInformation.json; sourceTree = "<group>"; };
 		CBAC6FB92767AA8B00342297 /* KOInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KOInformation.json; sourceTree = "<group>"; };
 		CBAC6FBA2767AA8B00342297 /* GetRate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetRate.json; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		CBAC6FCB2767AAD000342297 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateModel.swift; sourceTree = "<group>"; };
 		CBAC6FCD2767AAD000342297 /* RateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
-		CBAC6FCE2767AAD000342297 /* TariffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffColor.swift; sourceTree = "<group>"; };
 		CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInforamationRateView.swift; sourceTree = "<group>"; };
 		CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRateCell.swift; sourceTree = "<group>"; };
 		CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonInformationRateView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,19 @@
 			path = FetchService;
 			sourceTree = "<group>";
 		};
+		CB8A6FFA2771DDBA005B824E /* CodableModels */ = {
+			isa = PBXGroup;
+			children = (
+				CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */,
+				CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */,
+				CBAC6FCB2767AAD000342297 /* NoteModel.swift */,
+				CB8A6FF62771D9C2005B824E /* TariffColor.swift */,
+				CBAC6FCD2767AAD000342297 /* RateModel.swift */,
+				CBF522D2276AB52900914131 /* EditRateModel.swift */,
+			);
+			path = CodableModels;
+			sourceTree = "<group>";
+		};
 		CBAC6FC22767AAD000342297 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,12 +299,8 @@
 		CBAC6FC92767AAD000342297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */,
-				CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */,
-				CBAC6FCB2767AAD000342297 /* NoteModel.swift */,
-				CBAC6FCD2767AAD000342297 /* RateModel.swift */,
-				CBAC6FCE2767AAD000342297 /* TariffColor.swift */,
-				CBF522D2276AB52900914131 /* EditRateModel.swift */,
+				CB8A6FFA2771DDBA005B824E /* CodableModels */,
+				CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -490,8 +501,9 @@
 				CB8762FE275E4C5900CC8994 /* AppDelegate.swift in Sources */,
 				CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */,
 				CB876300275E4C5900CC8994 /* SceneDelegate.swift in Sources */,
+				CB8A6FF92771DBD3005B824E /* InformationTariffModel.swift in Sources */,
 				CBAC6FF62767AAD000342297 /* BulletInformationRateView.swift in Sources */,
-				CBAC6FF22767AAD000342297 /* TariffColor.swift in Sources */,
+				CB8A6FF72771D9C2005B824E /* TariffColor.swift in Sources */,
 				CB876323275E4F3700CC8994 /* ViewController.swift in Sources */,
 				CB876326275E4FA800CC8994 /* AppRouter.swift in Sources */,
 				CB87631E275E4E5B00CC8994 /* StringHightExtension.swift in Sources */,

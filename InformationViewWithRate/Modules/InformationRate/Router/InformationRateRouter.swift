@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 12.0, *)
 final class InformationRateRouter: InformationRateRouterDelegate {
     
     private weak var appViewController: AppViewControllerType?
@@ -15,7 +14,6 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     private weak var viewController: UIViewController?
     private var presenter: (InformationRatePresenterType & InformationRateInteractorDelegate & AddRatePresenterType)?
     
-//    MARK: weak var ошибка  'weak' must not be applied to non-class-bound 'InformatioDataFetcherServiceType'; consider adding a protocol conformance that has a class bound
     private var fetchService: InformatioDataFetcherServiceType
     private var editFetchService: EditRateDataFetcherServiceType
     private let aboutInformationName: String

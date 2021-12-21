@@ -11,7 +11,6 @@ protocol AppRouterType {
     func startApplication()
 }
 
-@available(iOS 12.0, *)
 final class AppRouter {
     private let appViewController: AppViewControllerType
     private let fetchService: InformatioDataFetcherServiceType

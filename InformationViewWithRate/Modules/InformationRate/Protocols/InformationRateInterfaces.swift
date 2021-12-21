@@ -60,6 +60,6 @@ protocol InformationRateInteractorType: AnyObject {
 }
 
 protocol InformationRateInteractorDelegate: AnyObject {
-    func onInformationRateFetched(informationRate: InformationRate)
+    func onInformationRateFetched(informationTariff: InformationTariff)
 }
 
