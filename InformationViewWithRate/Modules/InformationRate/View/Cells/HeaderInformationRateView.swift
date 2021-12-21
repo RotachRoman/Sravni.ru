@@ -13,14 +13,6 @@ import UIKit
 class HeaderInformationRateView: CellViewType {
     
     //    MARK: - UI elements
-    private lazy var arrowView: UIImageView = {
-        let view = UIImageView()
-        view.image = UIImage(named: "Arrow_left")
-        view.contentMode = .scaleAspectFill
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     private lazy var image: UIImageView = {
         let image = UIImageView()
         image.heightAnchor.constraint(equalToConstant: 325).isActive = true
@@ -69,7 +61,7 @@ class HeaderInformationRateView: CellViewType {
     //MARK: - Setup View -
     override func addSubviews() {
         super.addSubviews()
-        [image, header, title, arrowView].forEach { contentView.addSubview($0) }
+        [image, header, title].forEach { contentView.addSubview($0) }
     }
     
     override func addConstraints() {
@@ -79,12 +71,6 @@ class HeaderInformationRateView: CellViewType {
             image.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             image.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
             image.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        ])
-        NSLayoutConstraint.activate([
-            arrowView.heightAnchor.constraint(equalToConstant: 24),
-            arrowView.widthAnchor.constraint(equalToConstant: 24),
-            arrowView.topAnchor.constraint(equalTo: image.topAnchor, constant: 56),
-            arrowView.leadingAnchor.constraint(equalTo: image.leadingAnchor, constant: 16),
         ])
         NSLayoutConstraint.activate([
             title.leadingAnchor.constraint(equalTo: image.leadingAnchor, constant: 16),

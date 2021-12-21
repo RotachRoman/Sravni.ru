@@ -16,8 +16,8 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     private var presenter: (InformationRatePresenterType & InformationRateInteractorDelegate & AddRatePresenterType)?
     
 //    MARK: weak var ошибка  'weak' must not be applied to non-class-bound 'InformatioDataFetcherServiceType'; consider adding a protocol conformance that has a class bound
-    private var fetchService: InformatioDataFetcherServiceType
-    private var editFetchService: EditRateDataFetcherServiceType
+    private var fetchService: InformatioDataFetcherServiceType?
+    private var editFetchService: EditRateDataFetcherServiceType?
     private let aboutInformationName: String
     
     init(nameInformation: String, appViewController: AppViewControllerType, routerDelegate: InformationRateRouterDelegate, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {
@@ -33,12 +33,21 @@ final class InformationRateRouter: InformationRateRouterDelegate {
 extension InformationRateRouter: InformationRateRouterType {
     
     func startModule() {
-        let interactor = InformationRateInteractor(fetchService: fetchService, editFetchService: editFetchService)
+        guard let networkService = self.fetchService else {
+            assertionFailure("fetchService should be present on InformationRateRouter")
+            return
+        }
+        guard let editNetworkService = self.editFetchService else {
+            assertionFailure("editNetworkService should be present on InformationRateRouter")
+            return
+        }
+        let interactor = InformationRateInteractor(fetchService: networkService, editFetchService: editNetworkService)
         self.presenter = InformationRatePresenter(interactor: interactor, routerDelegate: self, nameAboutInformation: aboutInformationName)
         interactor.interatorDelegate = self.presenter!
         let viewController = InformationRateTableViewController(presenter: presenter!)
-        self.viewController = viewController
-        self.appViewController?.updateCurrent(to: viewController)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.viewController = navigationController
+        self.appViewController?.updateCurrent(to: navigationController)
     }
     
 }

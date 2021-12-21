@@ -11,7 +11,6 @@ protocol AppRouterType {
     func startApplication()
 }
 
-@available(iOS 12.0, *)
 final class AppRouter {
     private let appViewController: AppViewControllerType
     private let fetchService: InformatioDataFetcherServiceType
@@ -34,13 +33,11 @@ final class AppRouter {
     
 }
 
-@available(iOS 12.0, *)
 extension AppRouter: AppRouterType {
     func startApplication() {
         self.routeToView()
     }
 }
 
-@available(iOS 12.0, *)
 extension AppRouter: InformationRateRouterDelegate { }
 
