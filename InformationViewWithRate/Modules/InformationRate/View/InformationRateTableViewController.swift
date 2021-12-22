@@ -61,12 +61,7 @@ extension InformationRateTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = creatorCells?.addCells(informationRate: <#T##InformationRate#>)
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CellViewType.self), for: indexPath) as? CellViewType else {
-            return UITableViewCell()
-        }
-//        cell = creatorCells?.getCell(index: indexPath.row)
-//        let cell = cells[indexPath.row]
+        let cell = cells[indexPath.row]
         cell.selectionStyle = .none
         return cell
     }

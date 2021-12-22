@@ -31,9 +31,10 @@ extension InformationRateInteractor: InformationRateInteractorType {
                 print("Error. informationRate = nil")
                 return
             }
-            self.tariff = InformationTariff(informationRate: informationRate)
+            let tariff = InformationTariff(informationRate: informationRate)
+            self.tariff = tariff
 //            Отправление данных презентеру для дальнейшего отображения
-            self.interatorDelegate?.onInformationRateFetched(informationTariff: self.tariff!)
+            self.interatorDelegate?.onInformationRateFetched(informationTariff: tariff)
         }
     }
     
