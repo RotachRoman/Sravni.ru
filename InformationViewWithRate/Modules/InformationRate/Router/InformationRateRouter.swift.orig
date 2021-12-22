@@ -14,8 +14,14 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     private weak var viewController: UIViewController?
     private var presenter: (InformationRatePresenterType & InformationRateInteractorDelegate & AddRatePresenterType)?
     
+<<<<<<< HEAD
+//    MARK: weak var ошибка  'weak' must not be applied to non-class-bound 'InformatioDataFetcherServiceType'; consider adding a protocol conformance that has a class bound
     private var fetchService: InformatioDataFetcherServiceType?
     private var editFetchService: EditRateDataFetcherServiceType?
+=======
+    private var fetchService: InformatioDataFetcherServiceType
+    private var editFetchService: EditRateDataFetcherServiceType
+>>>>>>> What
     private let aboutInformationName: String
     
     init(nameInformation: String, appViewController: AppViewControllerType, routerDelegate: InformationRateRouterDelegate, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {

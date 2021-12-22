@@ -8,7 +8,6 @@
 import UIKit
 
 //MARK: - ячейка выбора коэффициента
-@available(iOS 12.0, *)
 class ButtonRateCell: CellViewType {
     
     private var presenter: СhangeRatePresenterType

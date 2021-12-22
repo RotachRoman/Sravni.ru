@@ -7,8 +7,6 @@
 
 import UIKit
 
-@available(iOS 12.0, *)
-
 // MARK: - Ячейка с тарифом
 class TariffInformationRateView: ViewType {
     

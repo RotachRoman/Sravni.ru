@@ -13,4 +13,6 @@ struct InformationRate: Codable {
     let bullet: [String]?
     let minRate, maxRate: Rate
     var rate: [RateCalculate]?
+
+//    init(name: String, header: String, headerTitle: String, staticText: String, note: Note, bullet: [String]?, minRate: Rate, maxRate)
 }

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 //MARK: - Заголовок ячеек/ячейки выбора коэффициента
-@available(iOS 12.0, *)
 class HeaderSelectButtonInformationRateCell: CellViewHeaderType {
     
     //    MARK: - init -

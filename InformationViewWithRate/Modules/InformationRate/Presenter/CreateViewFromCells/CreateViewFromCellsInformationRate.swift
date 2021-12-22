@@ -5,15 +5,12 @@
 //  Created by Rotach Roman on 10.12.2021.
 //
 
-import UIKit
-
 //MARK: Паттерн для создания ячеек(шаблонный метод)
 
 /// Для того, чтобы данные менялись в ячейке выбора "коэффициента",
 /// необходимо инициализировать переменную presenter: СhooseRatePresenterType
-@available(iOS 12.0, *)
 class CreateInformationRateCellAlgoritm {
-    var informationRate: InformationRate!
+    var informationTariff: InformationTariff!
     internal weak var presenter: СhangeRatePresenterType?
     
     private var cells: [CellViewType] = []
@@ -34,9 +31,9 @@ class CreateInformationRateCellAlgoritm {
     }
     
 //    заполняется массив ячеек вью для дальнейшего отображения
-    final func addCells(informationRate: InformationRate) -> [CellViewType] {
+    final func addCells(informationTariff: InformationTariff) -> [CellViewType] {
         self.cells = []
-        self.informationRate = informationRate
+        self.informationTariff = informationTariff
         
         [addHeader(), addStaticText()].forEach {
             appendCells($0)
@@ -54,6 +51,10 @@ class CreateInformationRateCellAlgoritm {
             appendCells($0)
         }
         return cells
+    }
+    
+    final func getCell(index: Int) -> CellViewType {
+        return cells[index]
     }
     
 //    чтобы не повторяться в коде, выносим функцию добавления ячеек

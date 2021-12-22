@@ -10,6 +10,7 @@ import UIKit
 final class InformationRateTableViewController: ViewController {
     
     var presenter: InformationRatePresenterType!
+    private var creatorCells: CreateInformationRateCellAlgoritm?
     private var cells: [CellViewType] = []
     
     //    MARK: - UI elements

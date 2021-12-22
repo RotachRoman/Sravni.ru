@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 // MARK: - Две ячейки с тарифом
-@available(iOS 12.0, *)
 final class TariffCellInfRateView: CellViewHeaderType {
     
     private var cheaperBezier: TariffInformationRateView!

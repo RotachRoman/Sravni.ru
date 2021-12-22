@@ -8,7 +8,6 @@
 import UIKit
 
 // MARK:  Ячейка "вернуться на главную"
-@available(iOS 12.0, *)
 class BackButtonInformationRateView: CellViewType {
     
     //    MARK: - UI elements
