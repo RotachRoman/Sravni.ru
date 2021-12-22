@@ -15,13 +15,15 @@
 		CB876323275E4F3700CC8994 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876322275E4F3700CC8994 /* ViewController.swift */; };
 		CB876326275E4FA800CC8994 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876325275E4FA800CC8994 /* AppRouter.swift */; };
 		CB876328275E4FC200CC8994 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876327275E4FC200CC8994 /* AppViewController.swift */; };
-		CB87632A275E4FD600CC8994 /* SetupAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876329275E4FD600CC8994 /* SetupAppRouter.swift */; };
+		CB87632A275E4FD600CC8994 /* SetupAppRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB876329275E4FD600CC8994 /* SetupAppRouterDelegate.swift */; };
 		CB876360275E511B00CC8994 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635C275E511B00CC8994 /* NetworkService.swift */; };
 		CB876361275E511B00CC8994 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635D275E511B00CC8994 /* LocalService.swift */; };
 		CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */; };
 		CB876363275E511B00CC8994 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635F275E511B00CC8994 /* DataFetcher.swift */; };
 		CB8A6FF72771D9C2005B824E /* TariffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF62771D9C2005B824E /* TariffColor.swift */; };
 		CB8A6FF92771DBD3005B824E /* InformationTariffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */; };
+		CB8A701427736EB0005B824E /* KBMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CB8A701327736EB0005B824E /* KBMInformation.json */; };
+		CB8A701627736ED5005B824E /* KTInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CB8A701527736ED5005B824E /* KTInformation.json */; };
 		CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB82767AA8B00342297 /* KMInformation.json */; };
 		CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB92767AA8B00342297 /* KOInformation.json */; };
 		CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBA2767AA8B00342297 /* GetRate.json */; };
@@ -68,13 +70,15 @@
 		CB876322275E4F3700CC8994 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB876325275E4FA800CC8994 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		CB876327275E4FC200CC8994 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
-		CB876329275E4FD600CC8994 /* SetupAppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAppRouter.swift; sourceTree = "<group>"; };
+		CB876329275E4FD600CC8994 /* SetupAppRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAppRouterDelegate.swift; sourceTree = "<group>"; };
 		CB87635C275E511B00CC8994 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CB87635D275E511B00CC8994 /* LocalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformatioDataFetcherService.swift; sourceTree = "<group>"; };
 		CB87635F275E511B00CC8994 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		CB8A6FF62771D9C2005B824E /* TariffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffColor.swift; sourceTree = "<group>"; };
 		CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTariffModel.swift; sourceTree = "<group>"; };
+		CB8A701327736EB0005B824E /* KBMInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = KBMInformation.json; sourceTree = "<group>"; };
+		CB8A701527736ED5005B824E /* KTInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = KTInformation.json; sourceTree = "<group>"; };
 		CBAC6FB82767AA8B00342297 /* KMInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KMInformation.json; sourceTree = "<group>"; };
 		CBAC6FB92767AA8B00342297 /* KOInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KOInformation.json; sourceTree = "<group>"; };
 		CBAC6FBA2767AA8B00342297 /* GetRate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetRate.json; sourceTree = "<group>"; };
@@ -182,7 +186,9 @@
 				CBAC6FBA2767AA8B00342297 /* GetRate.json */,
 				CBAC6FB82767AA8B00342297 /* KMInformation.json */,
 				CBAC6FB92767AA8B00342297 /* KOInformation.json */,
+				CB8A701527736ED5005B824E /* KTInformation.json */,
 				CBAC6FBC2767AA8B00342297 /* KVCInformation.json */,
+				CB8A701327736EB0005B824E /* KBMInformation.json */,
 			);
 			path = JSONs;
 			sourceTree = "<group>";
@@ -216,7 +222,7 @@
 		CB876324275E4F5700CC8994 /* AppSettings */ = {
 			isa = PBXGroup;
 			children = (
-				CB876329275E4FD600CC8994 /* SetupAppRouter.swift */,
+				CB876329275E4FD600CC8994 /* SetupAppRouterDelegate.swift */,
 				CB8762FD275E4C5900CC8994 /* AppDelegate.swift */,
 				CB8762FF275E4C5900CC8994 /* SceneDelegate.swift */,
 				CB876325275E4FA800CC8994 /* AppRouter.swift */,
@@ -460,7 +466,9 @@
 			files = (
 				CBAC6FC02767AA8B00342297 /* BTInformation.json in Resources */,
 				CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */,
+				CB8A701627736ED5005B824E /* KTInformation.json in Resources */,
 				CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */,
+				CB8A701427736EB0005B824E /* KBMInformation.json in Resources */,
 				CB87630A275E4C5C00CC8994 /* LaunchScreen.storyboard in Resources */,
 				CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */,
 				CB876307275E4C5C00CC8994 /* Assets.xcassets in Resources */,
@@ -489,7 +497,7 @@
 				CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */,
 				CB876328275E4FC200CC8994 /* AppViewController.swift in Sources */,
 				CBF522CE2767B06800914131 /* TariffCellInfRateView.swift in Sources */,
-				CB87632A275E4FD600CC8994 /* SetupAppRouter.swift in Sources */,
+				CB87632A275E4FD600CC8994 /* SetupAppRouterDelegate.swift in Sources */,
 				CBAC6FFF2767AAD000342297 /* CellViewType.swift in Sources */,
 				CBAC6FFA2767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift in Sources */,
 				CBAC6FED2767AAD000342297 /* CrateInformationRateViewFromCell.swift in Sources */,
