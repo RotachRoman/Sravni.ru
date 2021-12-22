@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 12.0, *)
 final class InformationRateTableViewController: ViewController {
     
     var presenter: InformationRatePresenterType!

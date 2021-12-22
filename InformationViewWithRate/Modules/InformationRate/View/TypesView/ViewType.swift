@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 12.0, *)
 class ViewType: UIView {
     
     init() {
