@@ -25,7 +25,7 @@ class HeaderSelectButtonInformationRateCell: CellViewHeaderType {
     override func addConstraints() {
         super.addConstraints()
         NSLayoutConstraint.activate([
-            header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24)
+            header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 14)
         ])
     }
 }

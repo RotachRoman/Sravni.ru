@@ -32,7 +32,8 @@ class BackButtonInformationRateView: CellViewType {
             configuration.title = "Вернуться на главную"
             button.configuration = configuration
         } else {
-            
+            button.setTitle("Вернуться на главную", for: .normal)
+            button.titleLabel?.textColor = UIColor(red: 0, green: 0.686, blue: 1, alpha: 1)
             button.setTitleColor(UIColor(red: 0, green: 0.686, blue: 1, alpha: 1), for: .normal)
             button.backgroundColor = UIColor(red: 0, green: 0.686, blue: 1, alpha: 0.06)
             button.contentEdgeInsets = UIEdgeInsets(top: 18, left: 0, bottom: 18, right: 0)

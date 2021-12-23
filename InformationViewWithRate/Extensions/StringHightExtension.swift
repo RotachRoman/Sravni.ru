@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 10.0, *)
 extension String {
 ///  В строке, в диапазоне с 'withTeg'  до endTeg  меняется attribute на tegAttribute
     func changeStyle(startTeg: String, endTeg: String, normalAttribute: [NSAttributedString.Key : Any], tegAttribute: [NSAttributedString.Key : Any]) -> NSAttributedString {

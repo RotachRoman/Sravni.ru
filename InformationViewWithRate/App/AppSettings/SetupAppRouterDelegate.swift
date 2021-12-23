@@ -31,7 +31,7 @@ final class SetupAppRouter: SetupAppRouterType{
         let fetchInformationRate = InformatioDataFetcherService()
         let editFetchService = EditRateDataFetcherService()
         let arrayNameInformation = ["BT", "KM", "KT", "KBM", "KO", "KVC"]
-        self.appRouter = AppRouter(nameInformation: arrayNameInformation[3], appViewController: viewController(), fetchService: fetchInformationRate, editFetchService: editFetchService)
+        self.appRouter = AppRouter(nameInformation: arrayNameInformation[5], appViewController: viewController(), fetchService: fetchInformationRate, editFetchService: editFetchService)
         self.appRouter?.startApplication()
     }
     

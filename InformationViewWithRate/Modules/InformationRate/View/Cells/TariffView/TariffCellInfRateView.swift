@@ -48,10 +48,10 @@ final class TariffCellInfRateView: CellViewHeaderType {
         NSLayoutConstraint.activate([
             cheaperBezier.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 16),
             cheaperBezier.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: sideConstant),
-            cheaperBezier.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            cheaperBezier.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -11),
             
             expensivelyBezier.topAnchor.constraint(equalTo: cheaperBezier.topAnchor),
-            expensivelyBezier.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            expensivelyBezier.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -11),
             expensivelyBezier.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -sideConstant),
             
             cheaperBezier.trailingAnchor.constraint(equalTo: expensivelyBezier.leadingAnchor, constant: -sideConstant),

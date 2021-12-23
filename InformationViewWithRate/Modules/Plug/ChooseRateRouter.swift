@@ -7,7 +7,6 @@
 
 import Foundation
 
-@available(iOS 12.0, *)
 class ChooseRateRouter {
     private let nameRate: String
     private let backRouter: IRTRouterStartWithSelectedRateProtocol

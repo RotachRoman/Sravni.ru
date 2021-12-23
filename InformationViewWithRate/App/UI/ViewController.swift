@@ -7,7 +7,6 @@
 
 import UIKit
 
-@available(iOS 10.0, *)
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
