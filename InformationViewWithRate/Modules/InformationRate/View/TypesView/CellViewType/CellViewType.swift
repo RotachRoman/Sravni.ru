@@ -9,6 +9,12 @@ import UIKit
 
 class CellViewType: UITableViewCell {
     
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addSubviews()
+        addConstraints()
+    }
+    
     init(){
         super.init(style: .default, reuseIdentifier: String(describing: CellViewType.self))
         addSubviews()

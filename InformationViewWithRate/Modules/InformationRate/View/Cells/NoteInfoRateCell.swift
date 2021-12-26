@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Информационная ячейка "Равновесие"
-class BalanceInformationRateView: CellViewType {
+class NoteInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
     private let layerView: UIView = {
@@ -42,17 +42,12 @@ class BalanceInformationRateView: CellViewType {
     }()
     
     //MARK: - init -
-    init(title: String, text: String){
-        super.init()
+    private func commonInit(title: String, text: String){
         self.title.text = title
         let regularAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .regular)]
         let boldAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .bold)]
         let changedText = text.changeStyle(startTeg: "&*", endTeg: "*&", normalAttribute: regularAttribute, tegAttribute: boldAttribute)
         self.textComponent.attributedText = changedText
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Setup View -
@@ -84,5 +79,13 @@ class BalanceInformationRateView: CellViewType {
             textComponent.trailingAnchor.constraint(equalTo: layerView.trailingAnchor, constant: -constant)
         ])
     }
+}
+//MARK: - Updatable
+extension NoteInfoRateCell: Updatable {
+    typealias ViewData = NoteViewData
     
+    func updateWithViewData(viewData: ViewData) {
+        commonInit(title: viewData.title, text: viewData.text)
+        addConstraints()
+    }
 }

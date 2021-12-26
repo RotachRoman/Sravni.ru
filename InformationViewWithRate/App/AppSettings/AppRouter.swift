@@ -16,7 +16,7 @@ final class AppRouter {
     private let fetchService: InformatioDataFetcherServiceType
     private var editFetchService: EditRateDataFetcherServiceType
     
-    private var rateInformRouter: InformationRateRouterType?
+    private var rateInformRouter: InfoRateRouterType?
     private let nameInformation: String
     
     init(nameInformation: String, appViewController: AppViewControllerType, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {
@@ -39,5 +39,5 @@ extension AppRouter: AppRouterType {
     }
 }
 
-extension AppRouter: InformationRateRouterDelegate { }
+extension AppRouter: InfoRateRouterDelegate { }
 

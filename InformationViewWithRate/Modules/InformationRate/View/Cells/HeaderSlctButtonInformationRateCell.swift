@@ -9,17 +9,9 @@ import Foundation
 import UIKit
 
 //MARK: - Заголовок ячеек/ячейки выбора коэффициента
-class HeaderSelectButtonInformationRateCell: CellViewHeaderType {
+class HeaderSlctButtonInfoRateCell: CellViewHeaderType {
     
     //    MARK: - init -
-    override init(header: String){
-        let fullHeader = "Узнайте свой " + header.lowercased()
-        super.init(header: fullHeader)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     
     //MARK: - Setup View -
     override func addConstraints() {
@@ -27,5 +19,15 @@ class HeaderSelectButtonInformationRateCell: CellViewHeaderType {
         NSLayoutConstraint.activate([
             header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 14)
         ])
+    }
+}
+//MARK: - Updatable
+extension HeaderSlctButtonInfoRateCell: Updatable {
+    typealias ViewData = ButtonHeaderViewData
+    
+    func updateWithViewData(viewData: ViewData) {
+        super.updateWithViewData(header: viewData.title)
+        addConstraints()
+        addSubviews()
     }
 }

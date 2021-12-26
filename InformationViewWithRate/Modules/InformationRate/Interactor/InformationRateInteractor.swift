@@ -10,9 +10,9 @@ import Foundation
 final class InformationRateInteractor {
     private let fetchService: InformatioDataFetcherServiceType
     private let editFetchService: EditRateDataFetcherServiceType
-    weak var interatorDelegate: InformationRateInteractorDelegate?
+    weak var interatorDelegate: InfoRateInteractorDelegate?
     
-    private var tariff: InformationTariff?
+    private var tariff: InfoTariff?
     
     init(fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType){
         self.fetchService = fetchService
@@ -23,7 +23,7 @@ final class InformationRateInteractor {
 // MARK: - Extensions -
 
 // получение основных данных для вью
-extension InformationRateInteractor: InformationRateInteractorType {
+extension InformationRateInteractor: InfoRateInteractorType {
     func fetchInformation(aboutName name: String){
         fetchService.fetchLocalRate(nameInformation: name) { [weak self] infRate in
             guard let self = self else { return }
@@ -31,7 +31,7 @@ extension InformationRateInteractor: InformationRateInteractorType {
                 print("Error. informationRate = nil")
                 return
             }
-            let tariff = InformationTariff(informationRate: informationRate)
+            let tariff = InfoTariff(informationRate: informationRate)
             self.tariff = tariff
 //            Отправление данных презентеру для дальнейшего отображения
             self.interatorDelegate?.onInformationRateFetched(informationTariff: tariff)

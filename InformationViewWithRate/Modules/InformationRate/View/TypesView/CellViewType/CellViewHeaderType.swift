@@ -19,14 +19,9 @@ class CellViewHeaderType: CellViewType {
         return label
     }()
     
-    init(header: String){
-        super.init()
-        self.header.text = header
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
     override func addSubviews() {
         super.addSubviews()
@@ -46,5 +41,9 @@ class CellViewHeaderType: CellViewType {
         topContraint.isActive = true
         
         super.addConstraints()
+    }
+    
+    func updateWithViewData(header: String) {
+        self.header.text = header
     }
 }

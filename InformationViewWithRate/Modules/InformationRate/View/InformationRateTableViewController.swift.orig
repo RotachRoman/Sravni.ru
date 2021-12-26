@@ -26,12 +26,20 @@ final class InformationRateTableViewController: ViewController {
         return tableView
     }()
     
+<<<<<<< HEAD
     private lazy var arrowView: UIImageView = {
         let view = UIImageView()
         view.image = UIImage(named: "Arrow_left")
         view.contentMode = .scaleAspectFill
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
+=======
+    lazy var leftBarButton: UIBarButtonItem = {
+        let button = UIButton()
+        button.setImage(UIImage(named: "Arrow_left"), for: .normal)
+        let barButton = UIBarButtonItem(customView: button)
+        return barButton
+>>>>>>> AddNavigationBar
     }()
     
     //MARK: - init -

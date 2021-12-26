@@ -8,7 +8,7 @@
 import UIKit
 
 //MARK: - Ячейка для списка с буллитами
-class BulletInformationRateView: CellViewType {
+class BulletInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
     private lazy var text: UILabel = {
@@ -30,14 +30,6 @@ class BulletInformationRateView: CellViewType {
     }()
     
     //MARK: - init -
-    init(text: String){
-        super.init()
-        self.text.text = text
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
 
     //MARK: - Setup View -
     override func addSubviews() {
@@ -60,6 +52,14 @@ class BulletInformationRateView: CellViewType {
             text.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             text.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -constant)
         ])
+    }
+}
+//MARK: - Updatable
+extension BulletInfoRateCell: Updatable {
+    typealias ViewData = BulletViewData
+    
+    func updateWithViewData(viewData: ViewData) {
+        self.text.text = viewData.text
     }
 }
 

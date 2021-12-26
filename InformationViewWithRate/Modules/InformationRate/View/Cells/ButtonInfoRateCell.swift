@@ -10,15 +10,15 @@ import UIKit
 //MARK: - ячейка выбора коэффициента
 class ButtonRateCell: CellViewType {
     
-    private var presenter: СhangeRatePresenterType
+    private var presenter: СhangeRatePresenterType!
     
     //    MARK: - UI elements
-    private let layerView: UIView = {
-        let view = UIView()
-        view.layer.backgroundColor = UIColor(red: 0.957, green: 0.969, blue: 0.984, alpha: 1).cgColor
-        view.layer.cornerRadius = 12
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+    private let layerButton: UIButton = {
+        let button = UIButton()
+        button.layer.backgroundColor = UIColor(red: 0.957, green: 0.969, blue: 0.984, alpha: 1).cgColor
+        button.layer.cornerRadius = 12
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     private lazy var title: UILabel = {
@@ -64,15 +64,15 @@ class ButtonRateCell: CellViewType {
     }
     
     //MARK: - init -
-    init(presenter: СhangeRatePresenterType, title: String, rateSelection: String?){
-        self.presenter = presenter
-        super.init()
-        commonInit(title: title, rateSelection: rateSelection)
-        addConstraints()
-        self.setupFunctionLayerView()
-    }
+//    init(title: String, rateSelection: String?){
+//        self.presenter = presenter
+//        super.init()
+//        addConstraints()
+//        self.setupFunctionLayerView()
+//    }
     
-    private func commonInit(title: String, rateSelection: String?){
+    private func commonInit(presenter: СhangeRatePresenterType, title: String, rateSelection: String?){
+        self.presenter = presenter
         if let rateSelection = rateSelection {
             self.rateSelection.text = rateSelection
             setupRateSelection()
@@ -80,17 +80,18 @@ class ButtonRateCell: CellViewType {
             setupTitle()
         }
         self.title.text = title
+        self.setupFunctionLayerView()
     }
     
     private func setupFunctionLayerView(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.chooseRate(_:)))
-        self.layerView.addGestureRecognizer(tap)
-        self.layerView.isUserInteractionEnabled = true
+        self.layerButton.addGestureRecognizer(tap)
+        self.layerButton.isUserInteractionEnabled = true
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     
 //    MARK: - @objc func
 //    Функция, срабатывающая по нажатию на layerView
@@ -102,15 +103,15 @@ class ButtonRateCell: CellViewType {
     //MARK: - Setup View -
     override func addSubviews() {
         super.addSubviews()
-        contentView.addSubview(layerView)
+        contentView.addSubview(layerButton)
         [title, strokeView].forEach { element in
-            layerView.addSubview(element)
+            layerButton.addSubview(element)
         }
     }
     
     private func setupRateSelection(){
         setupTitleWhenRateSelectionExit()
-        layerView.addSubview(rateSelection)
+        layerButton.addSubview(rateSelection)
     }
     
     override func addConstraints() {
@@ -118,25 +119,25 @@ class ButtonRateCell: CellViewType {
         
         super.addConstraints()
         
-        let titleBottomConstraint = title.bottomAnchor.constraint(equalTo: layerView.bottomAnchor, constant: -20)
-        titleBottomConstraint.priority = UILayoutPriority(100)
+        let titleBottomConstraint = title.bottomAnchor.constraint(equalTo: layerButton.bottomAnchor, constant: -20)
+        titleBottomConstraint.priority = UILayoutPriority(300)
         titleBottomConstraint.isActive = true
         
-        let titleTopConstraint = title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 20)
-        titleTopConstraint.priority = UILayoutPriority(100)
+        let titleTopConstraint = title.topAnchor.constraint(equalTo: layerButton.topAnchor, constant: 20)
+        titleTopConstraint.priority = UILayoutPriority(300)
         titleTopConstraint.isActive = true
         
         
         NSLayoutConstraint.activate([
-            layerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: defaultConstant),
-            layerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: defaultConstant),
-            layerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            layerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -defaultConstant),
+            layerButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: defaultConstant),
+            layerButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: defaultConstant),
+            layerButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            layerButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -defaultConstant),
             
-            strokeView.centerYAnchor.constraint(equalTo: layerView.centerYAnchor),
-            strokeView.trailingAnchor.constraint(equalTo: layerView.trailingAnchor, constant: -27),
+            strokeView.centerYAnchor.constraint(equalTo: layerButton.centerYAnchor),
+            strokeView.trailingAnchor.constraint(equalTo: layerButton.trailingAnchor, constant: -27),
             
-            title.leadingAnchor.constraint(equalTo: layerView.leadingAnchor, constant: defaultConstant),
+            title.leadingAnchor.constraint(equalTo: layerButton.leadingAnchor, constant: defaultConstant),
             title.trailingAnchor.constraint(lessThanOrEqualTo: strokeView.leadingAnchor, constant: -20)
             ])
         
@@ -144,16 +145,24 @@ class ButtonRateCell: CellViewType {
             titleBottomConstraint.isActive = false
             titleTopConstraint.isActive = false
             NSLayoutConstraint.activate([
-                title.topAnchor.constraint(equalTo: layerView.topAnchor, constant: 10)
+                title.topAnchor.constraint(equalTo: layerButton.topAnchor, constant: 10)
             ])
             
             NSLayoutConstraint.activate([
                 rateSelection.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 2),
-                rateSelection.leadingAnchor.constraint(equalTo: layerView.leadingAnchor, constant: defaultConstant),
-                rateSelection.bottomAnchor.constraint(equalTo: layerView.bottomAnchor, constant: -10),
+                rateSelection.leadingAnchor.constraint(equalTo: layerButton.leadingAnchor, constant: defaultConstant),
+                rateSelection.bottomAnchor.constraint(equalTo: layerButton.bottomAnchor, constant: -10),
                 rateSelection.trailingAnchor.constraint(equalTo: strokeView.leadingAnchor, constant: -20),
             ])
         }
     }
 }
-
+//MARK: - Updatable
+extension ButtonRateCell: Updatable {
+    typealias ViewData = ButtonChangeTariffViewData
+    
+    func updateWithViewData(viewData: ViewData) {
+        commonInit(presenter: viewData.presenter, title: viewData.title, rateSelection: viewData.rateSelection)
+        addConstraints()
+    }
+}

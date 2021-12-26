@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK:  Ячейка "вернуться на главную"
-class BackButtonInformationRateView: CellViewType {
+class BackButtonInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
     private lazy var button: UIButton = {
@@ -24,7 +24,6 @@ class BackButtonInformationRateView: CellViewType {
         button.setAttributedTitle(NSMutableAttributedString(string: "Вернуться на главную", attributes: attributes), for: .normal)
         
         if #available(iOS 15.0, *) {
-            
             var configuration = UIButton.Configuration.filled()
             configuration.contentInsets = NSDirectionalEdgeInsets(top: 18, leading: 0, bottom: 18, trailing: 0)
             configuration.baseBackgroundColor = UIColor(red: 0, green: 0.686, blue: 1, alpha: 0.06)

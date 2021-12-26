@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 //MARK: Ячейка отображения коэффициента
-class RateInforamationRateView: CellViewType {
+class RateInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
     private lazy var ourRate: UILabel = {
@@ -33,14 +33,9 @@ class RateInforamationRateView: CellViewType {
     }()
     
     //MARK: - init -
-    init(nameRate: String, rate: String){
-        super.init()
-        ourRate.text = "Ваш коэфициент " + nameRate
-        self.rate.text = "×" + rate
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    private func commonInit(nameRate: String, rate: String){
+        ourRate.text = nameRate
+        self.rate.text = rate
     }
     
     //MARK: - Setup View -
@@ -56,11 +51,20 @@ class RateInforamationRateView: CellViewType {
             ourRate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 28),
             ourRate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
             ourRate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
-            ourRate.trailingAnchor.constraint(lessThanOrEqualTo: rate.trailingAnchor, constant: -12),
+            ourRate.trailingAnchor.constraint(equalTo: rate.leadingAnchor, constant: -12),
             
             rate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 29),
             rate.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
             rate.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32)
         ])
+    }
+}
+//MARK: - Updatable
+extension RateInfoRateCell: Updatable {
+    typealias ViewData = RateInfoViewData
+    
+    func updateWithViewData(viewData: ViewData) {
+        commonInit(nameRate: viewData.title, rate: viewData.rate)
+        addConstraints()
     }
 }

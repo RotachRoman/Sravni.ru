@@ -8,9 +8,8 @@
 import UIKit
 
 // MARK: - Ячейка с тарифом
-class TariffInformationRateView: ViewType {
+class TariffInfoRateView: ViewType {
     
-    private let bezierView: UILabel = UILabel()
     private var backColor: UIColor!
     
     //    MARK: - UI elements
@@ -68,17 +67,12 @@ class TariffInformationRateView: ViewType {
         label.textColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 1)
         label.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.kern: -0.08])
         label.lineBreakMode = .byWordWrapping
-        
         label.numberOfLines = 0
         return label
     }()
     
     //    MARK: - init -
-    init(text: String,
-         ratio: String,
-         sale: String?,
-         backgroundCoolor: UIColor,
-         saleColor: UIColor) {
+    init(text: String, ratio: String, sale: String?, backgroundCoolor: UIColor, saleColor: UIColor) {
         super.init()
         commonInit(text: text, ratio: ratio, sale: sale, backgroundColor: backgroundCoolor, saleColor: saleColor)
         addConstraints()
@@ -91,7 +85,7 @@ class TariffInformationRateView: ViewType {
     private func commonInit(text: String,
                         ratio: String,
                         sale: String?,
-                            backgroundColor: UIColor,
+                        backgroundColor: UIColor,
                         saleColor: UIColor) {
         aboutLabel.text = text
         ratioLabel.text = ratio
@@ -111,42 +105,36 @@ class TariffInformationRateView: ViewType {
     
     //MARK: - Setup View -
     override func addSubviews(){
-        bezierView.translatesAutoresizingMaskIntoConstraints = false
+        self.translatesAutoresizingMaskIntoConstraints = false
         super.addSubviews()
-        self.addSubview(bezierView)
-        bezierView.addSubview(aboutLabel)
-        bezierView.addSubview(ratioLabel)
+        self.addSubview(aboutLabel)
+        self.addSubview(ratioLabel)
     }
     
     private func addAdditionalSubwiew(){
-        bezierView.addSubview(capsul)
+        self.addSubview(capsul)
         capsul.addSubview(capsulLabel)
     }
     
     override func addConstraints() {
         super.addConstraints()
         NSLayoutConstraint.activate([
-            bezierView.topAnchor.constraint(equalTo: self.topAnchor, constant: 2),
-            bezierView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 2),
-            bezierView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            bezierView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -2),
-            
-            ratioLabel.topAnchor.constraint(equalTo: bezierView.topAnchor, constant: 16),
-            ratioLabel.leadingAnchor.constraint(equalTo: bezierView.leadingAnchor, constant: 16),
-            ratioLabel.trailingAnchor.constraint(lessThanOrEqualTo: bezierView.trailingAnchor),
+            ratioLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
+            ratioLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            ratioLabel.trailingAnchor.constraint(lessThanOrEqualTo: self.trailingAnchor),
             
             aboutLabel.topAnchor.constraint(equalTo: ratioLabel.bottomAnchor, constant: 8),
-            aboutLabel.leadingAnchor.constraint(equalTo: bezierView.leadingAnchor, constant: 16),
-            aboutLabel.trailingAnchor.constraint(equalTo: bezierView.trailingAnchor, constant: -16),
+            aboutLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            aboutLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
         ])
         
         if capsulLabel.text != "" {
             addAdditionalSubwiew()
             NSLayoutConstraint.activate([
-                capsul.topAnchor.constraint(equalTo: bezierView.topAnchor, constant: 18),
-                capsul.leadingAnchor.constraint(greaterThanOrEqualTo: bezierView.leadingAnchor),
+                capsul.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
+                capsul.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor),
                 capsul.bottomAnchor.constraint(lessThanOrEqualTo: aboutLabel.bottomAnchor),
-                capsul.trailingAnchor.constraint(equalTo: bezierView.trailingAnchor, constant: -16),
+                capsul.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                 
                 capsulLabel.topAnchor.constraint(equalTo: capsul.topAnchor, constant: 3),
                 capsulLabel.leadingAnchor.constraint(equalTo: capsul.leadingAnchor, constant: 4),
@@ -159,15 +147,22 @@ class TariffInformationRateView: ViewType {
     }
 }
 
+extension TariffInfoRateView: Updatable {
+    typealias ViewData = TariffViewData
+    
+    func updateWithViewData(viewData: TariffViewData) {
+        commonInit(text: viewData.text, ratio: viewData.ratio, sale: viewData.sale, backgroundColor: viewData.backgroundCoolor, saleColor: viewData.saleColor)
+    }
+}
+
 //MARK: - Shadow -
-extension TariffInformationRateView {
+extension TariffInfoRateView {
     private func setupShadow(view: UIView){
         let perimeterShadow = CALayer()
         let shadowPath = UIBezierPath(roundedRect: view.bounds, cornerRadius: 8)
 
         perimeterShadow.frame = view.bounds
         perimeterShadow.shadowPath = shadowPath.cgPath
-//        perimeterShadow.colo
         perimeterShadow.shadowColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 0.06).cgColor
         perimeterShadow.shadowRadius = 14
         perimeterShadow.shadowOpacity = 1

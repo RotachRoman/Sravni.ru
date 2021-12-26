@@ -8,7 +8,7 @@
 import UIKit
 
 //  MARK: - header с картинкой и title
-class HeaderInformationRateView: CellViewType {
+class HeaderInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
     private lazy var image: UIImageView = {
@@ -45,15 +45,11 @@ class HeaderInformationRateView: CellViewType {
     }()
     
     //MARK: - init -
-    init(header: String, title: String, imageName: String){
-        super.init()
+    
+    private func commonInit(header: String, title: String, imageName: String){
         image.image = UIImage(named: imageName)
         self.header.text = header
         self.title.text = title
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Setup View -
@@ -80,5 +76,15 @@ class HeaderInformationRateView: CellViewType {
             header.bottomAnchor.constraint(equalTo: title.topAnchor, constant: -4),
             header.trailingAnchor.constraint(lessThanOrEqualTo: image.trailingAnchor, constant: -16)
         ])
+    }
+}
+//MARK: - Updatable
+extension HeaderInfoRateCell: Updatable {
+    typealias ViewData = HeaderViewData
+    
+    func updateWithViewData(viewData: ViewData) {
+        commonInit(header: viewData.header, title: viewData.title, imageName: viewData.imageName)
+        addConstraints()
+        addSubviews()
     }
 }

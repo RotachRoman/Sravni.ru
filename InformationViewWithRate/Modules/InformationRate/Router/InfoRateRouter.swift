@@ -7,18 +7,17 @@
 
 import UIKit
 
-final class InformationRateRouter: InformationRateRouterDelegate {
+final class InformationRateRouter: InfoRateRouterDelegate {
     
     private weak var appViewController: AppViewControllerType?
-    private weak var routerDelegate: InformationRateRouterDelegate?
-    private weak var viewController: UIViewController?
-    private var presenter: (InformationRatePresenterType & InformationRateInteractorDelegate & AddRatePresenterType)?
+    private weak var routerDelegate: InfoRateRouterDelegate?
+    private var presenter: (InfoRatePresenterType & InfoRateInteractorDelegate & AddRatePresenterType)?
     
     private var fetchService: InformatioDataFetcherServiceType?
     private var editFetchService: EditRateDataFetcherServiceType?
     private let aboutInformationName: String
     
-    init(nameInformation: String, appViewController: AppViewControllerType, routerDelegate: InformationRateRouterDelegate, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {
+    init(nameInformation: String, appViewController: AppViewControllerType, routerDelegate: InfoRateRouterDelegate, fetchService: InformatioDataFetcherServiceType, editFetchService: EditRateDataFetcherServiceType) {
         self.appViewController = appViewController
         self.routerDelegate = routerDelegate
         self.fetchService = fetchService
@@ -27,8 +26,7 @@ final class InformationRateRouter: InformationRateRouterDelegate {
     }
 }
 
-@available(iOS 12.0, *)
-extension InformationRateRouter: InformationRateRouterType {
+extension InformationRateRouter: InfoRateRouterType {
     
     func startModule() {
         guard let networkService = self.fetchService else {
@@ -40,16 +38,15 @@ extension InformationRateRouter: InformationRateRouterType {
             return
         }
         let interactor = InformationRateInteractor(fetchService: networkService, editFetchService: editNetworkService)
-        self.presenter = InformationRatePresenter(interactor: interactor, routerDelegate: self, nameAboutInformation: aboutInformationName)
+        self.presenter = InfoRatePresenter(interactor: interactor, routerDelegate: self, nameAboutInformation: aboutInformationName)
         interactor.interatorDelegate = self.presenter!
-        let viewController = InformationRateTableViewController(presenter: presenter!)
-        self.viewController = viewController
-        self.appViewController?.updateCurrent(to: viewController)
+        let viewController = InfoRateTableViewController(presenter: presenter!)
+        let navigationViewController = UINavigationController(rootViewController: viewController)
+        self.appViewController?.updateCurrent(to: navigationViewController)
     }
     
 }
 
-@available(iOS 12.0, *)
 extension InformationRateRouter: IRTRouterStartWithSelectedRateProtocol {
     
     func addSelectedRate(title: String, urlString: String){
@@ -57,8 +54,7 @@ extension InformationRateRouter: IRTRouterStartWithSelectedRateProtocol {
     }
 }
 
-@available(iOS 12.0, *)
-extension InformationRateRouter: InformationRatePresenterRouterDelegate {
+extension InformationRateRouter: InfoRatePresenterRouterDelegate {
     func chooseRate(nameRate: String) {
         let _ = ChooseRateRouter(nameRate: nameRate, backRouter: self)
     }

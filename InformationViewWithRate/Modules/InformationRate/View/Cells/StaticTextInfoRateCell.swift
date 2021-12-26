@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //MARK: - Ячейка статичного текста
-class StaticTextInformationRateView: CellViewHeaderType {
+class StaticTextInfoRateCell: CellViewHeaderType {
     
     //    MARK: - UI elements
     private lazy var text: UILabel = {
@@ -25,17 +25,12 @@ class StaticTextInformationRateView: CellViewHeaderType {
     }()
     
     //MARK: - init -
-    init(text: String){
-        super.init(header: "Как определяется?")
-        
+    
+    private func commonInit(text: String) {
         let regularAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .regular)]
         let boldAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .bold)]
         let changedText = text.changeStyle(startTeg: "&*", endTeg: "*&", normalAttribute: regularAttribute, tegAttribute: boldAttribute)
         self.text.attributedText = changedText
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Setup View -
@@ -57,5 +52,16 @@ class StaticTextInformationRateView: CellViewHeaderType {
             text.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             text.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -constant)
         ])
+    }
+}
+//MARK: - Updatable
+extension StaticTextInfoRateCell: Updatable {
+    typealias ViewData = StaticTextViewData
+    
+    func updateWithViewData(viewData: ViewData) {
+        super.updateWithViewData(header: viewData.header)
+        commonInit(text: viewData.text)
+        addConstraints()
+        addSubviews()
     }
 }

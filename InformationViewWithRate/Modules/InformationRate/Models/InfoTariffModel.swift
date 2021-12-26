@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct InformationTariff {
+struct InfoTariff {
     var informationRate: InformationRate
     let cheaperColor, expensivelyColor: TariffColors
     

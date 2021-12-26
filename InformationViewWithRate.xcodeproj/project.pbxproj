@@ -21,39 +21,47 @@
 		CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */; };
 		CB876363275E511B00CC8994 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB87635F275E511B00CC8994 /* DataFetcher.swift */; };
 		CB8A6FF72771D9C2005B824E /* TariffColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF62771D9C2005B824E /* TariffColor.swift */; };
-		CB8A6FF92771DBD3005B824E /* InformationTariffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */; };
+		CB8A6FF92771DBD3005B824E /* InfoTariffModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A6FF82771DBD3005B824E /* InfoTariffModel.swift */; };
 		CB8A701427736EB0005B824E /* KBMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CB8A701327736EB0005B824E /* KBMInformation.json */; };
 		CB8A701627736ED5005B824E /* KTInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CB8A701527736ED5005B824E /* KTInformation.json */; };
+		CB8A701927772351005B824E /* HeaderViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A701827772351005B824E /* HeaderViewData.swift */; };
+		CB8A701B27772388005B824E /* StaticTextViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A701A27772388005B824E /* StaticTextViewData.swift */; };
+		CB8A701D277723BE005B824E /* BulletViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A701C277723BE005B824E /* BulletViewData.swift */; };
+		CB8A701F27772400005B824E /* TariffsViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A701E27772400005B824E /* TariffsViewData.swift */; };
+		CB8A70212777244E005B824E /* TariffViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A70202777244E005B824E /* TariffViewData.swift */; };
+		CB8A702327772612005B824E /* ButtonChangeTariffViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A702227772612005B824E /* ButtonChangeTariffViewData.swift */; };
+		CB8A70252777799E005B824E /* HeaderSelectButtonViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A70242777799E005B824E /* HeaderSelectButtonViewData.swift */; };
+		CB8A702727787EE7005B824E /* ButtonHeaderViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A702627787EE7005B824E /* ButtonHeaderViewData.swift */; };
+		CB8A70292778A594005B824E /* RateInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A70282778A594005B824E /* RateInfoViewModel.swift */; };
+		CB8A702B2778B498005B824E /* NoteViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A702A2778B498005B824E /* NoteViewData.swift */; };
 		CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB82767AA8B00342297 /* KMInformation.json */; };
 		CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB92767AA8B00342297 /* KOInformation.json */; };
 		CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBA2767AA8B00342297 /* GetRate.json */; };
 		CBAC6FC02767AA8B00342297 /* BTInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBB2767AA8B00342297 /* BTInformation.json */; };
 		CBAC6FC12767AA8B00342297 /* KVCInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBC2767AA8B00342297 /* KVCInformation.json */; };
-		CBAC6FEB2767AAD000342297 /* InformationRatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC52767AAD000342297 /* InformationRatePresenter.swift */; };
-		CBAC6FEC2767AAD000342297 /* CreateViewFromCellsInformationRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC72767AAD000342297 /* CreateViewFromCellsInformationRate.swift */; };
-		CBAC6FED2767AAD000342297 /* CrateInformationRateViewFromCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC82767AAD000342297 /* CrateInformationRateViewFromCell.swift */; };
+		CBAC6FEB2767AAD000342297 /* InfoRatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FC52767AAD000342297 /* InfoRatePresenter.swift */; };
 		CBAC6FEE2767AAD000342297 /* RateCalculateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */; };
 		CBAC6FEF2767AAD000342297 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCB2767AAD000342297 /* NoteModel.swift */; };
 		CBAC6FF02767AAD000342297 /* InformationRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */; };
 		CBAC6FF12767AAD000342297 /* RateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FCD2767AAD000342297 /* RateModel.swift */; };
-		CBAC6FF32767AAD000342297 /* RateInforamationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */; };
-		CBAC6FF42767AAD000342297 /* ButtonRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */; };
-		CBAC6FF52767AAD000342297 /* BackButtonInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */; };
-		CBAC6FF62767AAD000342297 /* BulletInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */; };
-		CBAC6FF92767AAD000342297 /* BalanceInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */; };
-		CBAC6FFA2767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */; };
-		CBAC6FFB2767AAD000342297 /* StaticTextInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */; };
-		CBAC6FFC2767AAD000342297 /* HeaderInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */; };
+		CBAC6FF32767AAD000342297 /* RateInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD12767AAD000342297 /* RateInfoRateCell.swift */; };
+		CBAC6FF42767AAD000342297 /* ButtonInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD22767AAD000342297 /* ButtonInfoRateCell.swift */; };
+		CBAC6FF52767AAD000342297 /* BackButtonInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD32767AAD000342297 /* BackButtonInfoRateCell.swift */; };
+		CBAC6FF62767AAD000342297 /* BulletInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD42767AAD000342297 /* BulletInfoRateCell.swift */; };
+		CBAC6FF92767AAD000342297 /* NoteInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD82767AAD000342297 /* NoteInfoRateCell.swift */; };
+		CBAC6FFA2767AAD000342297 /* HeaderSlctButtonInformationRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD92767AAD000342297 /* HeaderSlctButtonInformationRateCell.swift */; };
+		CBAC6FFB2767AAD000342297 /* StaticTextInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDA2767AAD000342297 /* StaticTextInfoRateCell.swift */; };
+		CBAC6FFC2767AAD000342297 /* HeaderInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDB2767AAD000342297 /* HeaderInfoRateCell.swift */; };
 		CBAC6FFD2767AAD000342297 /* ViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDD2767AAD000342297 /* ViewType.swift */; };
 		CBAC6FFE2767AAD000342297 /* CellViewHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FDF2767AAD000342297 /* CellViewHeaderType.swift */; };
 		CBAC6FFF2767AAD000342297 /* CellViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE02767AAD000342297 /* CellViewType.swift */; };
-		CBAC70002767AAD000342297 /* InformationRateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE12767AAD000342297 /* InformationRateTableViewController.swift */; };
-		CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */; };
+		CBAC70002767AAD000342297 /* InfoRateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE12767AAD000342297 /* InfoRateTableViewController.swift */; };
+		CBAC70012767AAD000342297 /* InfoRateInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE32767AAD000342297 /* InfoRateInterfaces.swift */; };
 		CBAC70022767AAD000342297 /* InformationRateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */; };
-		CBAC70032767AAD000342297 /* InformationRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */; };
+		CBAC70032767AAD000342297 /* InfoRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FE72767AAD000342297 /* InfoRateRouter.swift */; };
 		CBAC70052767AAD000342297 /* ChooseRateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */; };
-		CBAC700A2767ACCF00342297 /* TariffInformationRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */; };
-		CBF522CE2767B06800914131 /* TariffCellInfRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */; };
+		CBAC700A2767ACCF00342297 /* TariffInfoRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAC6FD72767AAD000342297 /* TariffInfoRateView.swift */; };
+		CBF522CE2767B06800914131 /* TariffCellInfoRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF522CD2767B06800914131 /* TariffCellInfoRateCell.swift */; };
 		CBF522D0276AB4A300914131 /* RateDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF522CF276AB4A300914131 /* RateDataFetcherService.swift */; };
 		CBF522D3276AB52900914131 /* EditRateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF522D2276AB52900914131 /* EditRateModel.swift */; };
 /* End PBXBuildFile section */
@@ -76,39 +84,47 @@
 		CB87635E275E511B00CC8994 /* InformatioDataFetcherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformatioDataFetcherService.swift; sourceTree = "<group>"; };
 		CB87635F275E511B00CC8994 /* DataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		CB8A6FF62771D9C2005B824E /* TariffColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffColor.swift; sourceTree = "<group>"; };
-		CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationTariffModel.swift; sourceTree = "<group>"; };
+		CB8A6FF82771DBD3005B824E /* InfoTariffModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTariffModel.swift; sourceTree = "<group>"; };
 		CB8A701327736EB0005B824E /* KBMInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = KBMInformation.json; sourceTree = "<group>"; };
 		CB8A701527736ED5005B824E /* KTInformation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = KTInformation.json; sourceTree = "<group>"; };
+		CB8A701827772351005B824E /* HeaderViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewData.swift; sourceTree = "<group>"; };
+		CB8A701A27772388005B824E /* StaticTextViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticTextViewData.swift; sourceTree = "<group>"; };
+		CB8A701C277723BE005B824E /* BulletViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulletViewData.swift; sourceTree = "<group>"; };
+		CB8A701E27772400005B824E /* TariffsViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffsViewData.swift; sourceTree = "<group>"; };
+		CB8A70202777244E005B824E /* TariffViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TariffViewData.swift; sourceTree = "<group>"; };
+		CB8A702227772612005B824E /* ButtonChangeTariffViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonChangeTariffViewData.swift; sourceTree = "<group>"; };
+		CB8A70242777799E005B824E /* HeaderSelectButtonViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSelectButtonViewData.swift; sourceTree = "<group>"; };
+		CB8A702627787EE7005B824E /* ButtonHeaderViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHeaderViewData.swift; sourceTree = "<group>"; };
+		CB8A70282778A594005B824E /* RateInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInfoViewModel.swift; sourceTree = "<group>"; };
+		CB8A702A2778B498005B824E /* NoteViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewData.swift; sourceTree = "<group>"; };
 		CBAC6FB82767AA8B00342297 /* KMInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KMInformation.json; sourceTree = "<group>"; };
 		CBAC6FB92767AA8B00342297 /* KOInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KOInformation.json; sourceTree = "<group>"; };
 		CBAC6FBA2767AA8B00342297 /* GetRate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetRate.json; sourceTree = "<group>"; };
 		CBAC6FBB2767AA8B00342297 /* BTInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BTInformation.json; sourceTree = "<group>"; };
 		CBAC6FBC2767AA8B00342297 /* KVCInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KVCInformation.json; sourceTree = "<group>"; };
-		CBAC6FC52767AAD000342297 /* InformationRatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRatePresenter.swift; sourceTree = "<group>"; };
-		CBAC6FC72767AAD000342297 /* CreateViewFromCellsInformationRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewFromCellsInformationRate.swift; sourceTree = "<group>"; };
-		CBAC6FC82767AAD000342297 /* CrateInformationRateViewFromCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrateInformationRateViewFromCell.swift; sourceTree = "<group>"; };
+		CBAC6FC52767AAD000342297 /* InfoRatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRatePresenter.swift; sourceTree = "<group>"; };
 		CBAC6FCA2767AAD000342297 /* RateCalculateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateCalculateModel.swift; sourceTree = "<group>"; };
 		CBAC6FCB2767AAD000342297 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		CBAC6FCC2767AAD000342297 /* InformationRateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateModel.swift; sourceTree = "<group>"; };
 		CBAC6FCD2767AAD000342297 /* RateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateModel.swift; sourceTree = "<group>"; };
-		CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInforamationRateView.swift; sourceTree = "<group>"; };
-		CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonRateCell.swift; sourceTree = "<group>"; };
-		CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonInformationRateView.swift; sourceTree = "<group>"; };
-		CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletInformationRateView.swift; sourceTree = "<group>"; };
-		CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffInformationRateView.swift; sourceTree = "<group>"; };
-		CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceInformationRateView.swift; sourceTree = "<group>"; };
-		CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSelectButtonInformationRateCell.swift; sourceTree = "<group>"; };
-		CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTextInformationRateView.swift; sourceTree = "<group>"; };
-		CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInformationRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD12767AAD000342297 /* RateInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateInfoRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FD22767AAD000342297 /* ButtonInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonInfoRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FD32767AAD000342297 /* BackButtonInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackButtonInfoRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FD42767AAD000342297 /* BulletInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BulletInfoRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FD72767AAD000342297 /* TariffInfoRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffInfoRateView.swift; sourceTree = "<group>"; };
+		CBAC6FD82767AAD000342297 /* NoteInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteInfoRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FD92767AAD000342297 /* HeaderSlctButtonInformationRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderSlctButtonInformationRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FDA2767AAD000342297 /* StaticTextInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticTextInfoRateCell.swift; sourceTree = "<group>"; };
+		CBAC6FDB2767AAD000342297 /* HeaderInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderInfoRateCell.swift; sourceTree = "<group>"; };
 		CBAC6FDD2767AAD000342297 /* ViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewType.swift; sourceTree = "<group>"; };
 		CBAC6FDF2767AAD000342297 /* CellViewHeaderType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewHeaderType.swift; sourceTree = "<group>"; };
 		CBAC6FE02767AAD000342297 /* CellViewType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewType.swift; sourceTree = "<group>"; };
-		CBAC6FE12767AAD000342297 /* InformationRateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateTableViewController.swift; sourceTree = "<group>"; };
-		CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInterfaces.swift; sourceTree = "<group>"; };
+		CBAC6FE12767AAD000342297 /* InfoRateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRateTableViewController.swift; sourceTree = "<group>"; };
+		CBAC6FE32767AAD000342297 /* InfoRateInterfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRateInterfaces.swift; sourceTree = "<group>"; };
 		CBAC6FE52767AAD000342297 /* InformationRateInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateInteractor.swift; sourceTree = "<group>"; };
-		CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationRateRouter.swift; sourceTree = "<group>"; };
+		CBAC6FE72767AAD000342297 /* InfoRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoRateRouter.swift; sourceTree = "<group>"; };
 		CBAC6FEA2767AAD000342297 /* ChooseRateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseRateRouter.swift; sourceTree = "<group>"; };
-		CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffCellInfRateView.swift; sourceTree = "<group>"; };
+		CBF522CD2767B06800914131 /* TariffCellInfoRateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffCellInfoRateCell.swift; sourceTree = "<group>"; };
 		CBF522CF276AB4A300914131 /* RateDataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateDataFetcherService.swift; sourceTree = "<group>"; };
 		CBF522D2276AB52900914131 /* EditRateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -262,6 +278,23 @@
 			path = CodableModels;
 			sourceTree = "<group>";
 		};
+		CB8A70172777232F005B824E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CB8A701827772351005B824E /* HeaderViewData.swift */,
+				CB8A701A27772388005B824E /* StaticTextViewData.swift */,
+				CB8A701C277723BE005B824E /* BulletViewData.swift */,
+				CB8A701E27772400005B824E /* TariffsViewData.swift */,
+				CB8A70202777244E005B824E /* TariffViewData.swift */,
+				CB8A70242777799E005B824E /* HeaderSelectButtonViewData.swift */,
+				CB8A702227772612005B824E /* ButtonChangeTariffViewData.swift */,
+				CB8A702627787EE7005B824E /* ButtonHeaderViewData.swift */,
+				CB8A70282778A594005B824E /* RateInfoViewModel.swift */,
+				CB8A702A2778B498005B824E /* NoteViewData.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		CBAC6FC22767AAD000342297 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,26 +320,17 @@
 		CBAC6FC42767AAD000342297 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FC52767AAD000342297 /* InformationRatePresenter.swift */,
-				CBAC6FC62767AAD000342297 /* CreateViewFromCells */,
+				CBAC6FC52767AAD000342297 /* InfoRatePresenter.swift */,
 			);
 			path = Presenter;
-			sourceTree = "<group>";
-		};
-		CBAC6FC62767AAD000342297 /* CreateViewFromCells */ = {
-			isa = PBXGroup;
-			children = (
-				CBAC6FC72767AAD000342297 /* CreateViewFromCellsInformationRate.swift */,
-				CBAC6FC82767AAD000342297 /* CrateInformationRateViewFromCell.swift */,
-			);
-			path = CreateViewFromCells;
 			sourceTree = "<group>";
 		};
 		CBAC6FC92767AAD000342297 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB8A70172777232F005B824E /* ViewModels */,
 				CB8A6FFA2771DDBA005B824E /* CodableModels */,
-				CB8A6FF82771DBD3005B824E /* InformationTariffModel.swift */,
+				CB8A6FF82771DBD3005B824E /* InfoTariffModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,7 +338,7 @@
 		CBAC6FCF2767AAD000342297 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FE12767AAD000342297 /* InformationRateTableViewController.swift */,
+				CBAC6FE12767AAD000342297 /* InfoRateTableViewController.swift */,
 				CBAC6FDC2767AAD000342297 /* TypesView */,
 				CBAC6FD02767AAD000342297 /* Cells */,
 			);
@@ -324,15 +348,15 @@
 		CBAC6FD02767AAD000342297 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FDB2767AAD000342297 /* HeaderInformationRateView.swift */,
-				CBAC6FDA2767AAD000342297 /* StaticTextInformationRateView.swift */,
-				CBAC6FD42767AAD000342297 /* BulletInformationRateView.swift */,
+				CBAC6FDB2767AAD000342297 /* HeaderInfoRateCell.swift */,
+				CBAC6FDA2767AAD000342297 /* StaticTextInfoRateCell.swift */,
+				CBAC6FD42767AAD000342297 /* BulletInfoRateCell.swift */,
 				CBAC6FD52767AAD000342297 /* TariffView */,
-				CBAC6FD92767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift */,
-				CBAC6FD22767AAD000342297 /* ButtonRateCell.swift */,
-				CBAC6FD12767AAD000342297 /* RateInforamationRateView.swift */,
-				CBAC6FD82767AAD000342297 /* BalanceInformationRateView.swift */,
-				CBAC6FD32767AAD000342297 /* BackButtonInformationRateView.swift */,
+				CBAC6FD92767AAD000342297 /* HeaderSlctButtonInformationRateCell.swift */,
+				CBAC6FD22767AAD000342297 /* ButtonInfoRateCell.swift */,
+				CBAC6FD12767AAD000342297 /* RateInfoRateCell.swift */,
+				CBAC6FD82767AAD000342297 /* NoteInfoRateCell.swift */,
+				CBAC6FD32767AAD000342297 /* BackButtonInfoRateCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -340,8 +364,8 @@
 		CBAC6FD52767AAD000342297 /* TariffView */ = {
 			isa = PBXGroup;
 			children = (
-				CBF522CD2767B06800914131 /* TariffCellInfRateView.swift */,
-				CBAC6FD72767AAD000342297 /* TariffInformationRateView.swift */,
+				CBF522CD2767B06800914131 /* TariffCellInfoRateCell.swift */,
+				CBAC6FD72767AAD000342297 /* TariffInfoRateView.swift */,
 			);
 			path = TariffView;
 			sourceTree = "<group>";
@@ -367,7 +391,7 @@
 		CBAC6FE22767AAD000342297 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FE32767AAD000342297 /* InformationRateInterfaces.swift */,
+				CBAC6FE32767AAD000342297 /* InfoRateInterfaces.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -383,7 +407,7 @@
 		CBAC6FE62767AAD000342297 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				CBAC6FE72767AAD000342297 /* InformationRateRouter.swift */,
+				CBAC6FE72767AAD000342297 /* InfoRateRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -483,43 +507,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBAC700A2767ACCF00342297 /* TariffInformationRateView.swift in Sources */,
-				CBAC6FF92767AAD000342297 /* BalanceInformationRateView.swift in Sources */,
-				CBAC6FEC2767AAD000342297 /* CreateViewFromCellsInformationRate.swift in Sources */,
+				CBAC700A2767ACCF00342297 /* TariffInfoRateView.swift in Sources */,
+				CBAC6FF92767AAD000342297 /* NoteInfoRateCell.swift in Sources */,
 				CBF522D3276AB52900914131 /* EditRateModel.swift in Sources */,
+				CB8A702B2778B498005B824E /* NoteViewData.swift in Sources */,
 				CBAC6FF12767AAD000342297 /* RateModel.swift in Sources */,
 				CBAC70022767AAD000342297 /* InformationRateInteractor.swift in Sources */,
-				CBAC6FF42767AAD000342297 /* ButtonRateCell.swift in Sources */,
-				CBAC70002767AAD000342297 /* InformationRateTableViewController.swift in Sources */,
-				CBAC6FFB2767AAD000342297 /* StaticTextInformationRateView.swift in Sources */,
+				CBAC6FF42767AAD000342297 /* ButtonInfoRateCell.swift in Sources */,
+				CBAC70002767AAD000342297 /* InfoRateTableViewController.swift in Sources */,
+				CBAC6FFB2767AAD000342297 /* StaticTextInfoRateCell.swift in Sources */,
 				CBAC6FEF2767AAD000342297 /* NoteModel.swift in Sources */,
-				CBAC6FF32767AAD000342297 /* RateInforamationRateView.swift in Sources */,
-				CBAC70012767AAD000342297 /* InformationRateInterfaces.swift in Sources */,
+				CBAC6FF32767AAD000342297 /* RateInfoRateCell.swift in Sources */,
+				CBAC70012767AAD000342297 /* InfoRateInterfaces.swift in Sources */,
 				CB876328275E4FC200CC8994 /* AppViewController.swift in Sources */,
-				CBF522CE2767B06800914131 /* TariffCellInfRateView.swift in Sources */,
+				CBF522CE2767B06800914131 /* TariffCellInfoRateCell.swift in Sources */,
+				CB8A70212777244E005B824E /* TariffViewData.swift in Sources */,
 				CB87632A275E4FD600CC8994 /* SetupAppRouterDelegate.swift in Sources */,
 				CBAC6FFF2767AAD000342297 /* CellViewType.swift in Sources */,
-				CBAC6FFA2767AAD000342297 /* HeaderSelectButtonInformationRateCell.swift in Sources */,
-				CBAC6FED2767AAD000342297 /* CrateInformationRateViewFromCell.swift in Sources */,
+				CBAC6FFA2767AAD000342297 /* HeaderSlctButtonInformationRateCell.swift in Sources */,
 				CBAC6FFD2767AAD000342297 /* ViewType.swift in Sources */,
 				CBF522D0276AB4A300914131 /* RateDataFetcherService.swift in Sources */,
 				CB876361275E511B00CC8994 /* LocalService.swift in Sources */,
-				CBAC6FFC2767AAD000342297 /* HeaderInformationRateView.swift in Sources */,
-				CBAC6FEB2767AAD000342297 /* InformationRatePresenter.swift in Sources */,
+				CBAC6FFC2767AAD000342297 /* HeaderInfoRateCell.swift in Sources */,
+				CBAC6FEB2767AAD000342297 /* InfoRatePresenter.swift in Sources */,
+				CB8A70252777799E005B824E /* HeaderSelectButtonViewData.swift in Sources */,
 				CB8762FE275E4C5900CC8994 /* AppDelegate.swift in Sources */,
 				CB876362275E511B00CC8994 /* InformatioDataFetcherService.swift in Sources */,
 				CB876300275E4C5900CC8994 /* SceneDelegate.swift in Sources */,
-				CB8A6FF92771DBD3005B824E /* InformationTariffModel.swift in Sources */,
-				CBAC6FF62767AAD000342297 /* BulletInformationRateView.swift in Sources */,
+				CB8A6FF92771DBD3005B824E /* InfoTariffModel.swift in Sources */,
+				CBAC6FF62767AAD000342297 /* BulletInfoRateCell.swift in Sources */,
+				CB8A701D277723BE005B824E /* BulletViewData.swift in Sources */,
+				CB8A702727787EE7005B824E /* ButtonHeaderViewData.swift in Sources */,
 				CB8A6FF72771D9C2005B824E /* TariffColor.swift in Sources */,
 				CB876323275E4F3700CC8994 /* ViewController.swift in Sources */,
 				CB876326275E4FA800CC8994 /* AppRouter.swift in Sources */,
+				CB8A701F27772400005B824E /* TariffsViewData.swift in Sources */,
 				CB87631E275E4E5B00CC8994 /* StringHightExtension.swift in Sources */,
 				CB876363275E511B00CC8994 /* DataFetcher.swift in Sources */,
-				CBAC70032767AAD000342297 /* InformationRateRouter.swift in Sources */,
-				CBAC6FF52767AAD000342297 /* BackButtonInformationRateView.swift in Sources */,
+				CBAC70032767AAD000342297 /* InfoRateRouter.swift in Sources */,
+				CB8A70292778A594005B824E /* RateInfoViewModel.swift in Sources */,
+				CBAC6FF52767AAD000342297 /* BackButtonInfoRateCell.swift in Sources */,
+				CB8A702327772612005B824E /* ButtonChangeTariffViewData.swift in Sources */,
+				CB8A701B27772388005B824E /* StaticTextViewData.swift in Sources */,
 				CBAC6FEE2767AAD000342297 /* RateCalculateModel.swift in Sources */,
 				CBAC6FF02767AAD000342297 /* InformationRateModel.swift in Sources */,
+				CB8A701927772351005B824E /* HeaderViewData.swift in Sources */,
 				CBAC70052767AAD000342297 /* ChooseRateRouter.swift in Sources */,
 				CBAC6FFE2767AAD000342297 /* CellViewHeaderType.swift in Sources */,
 				CB876360275E511B00CC8994 /* NetworkService.swift in Sources */,
