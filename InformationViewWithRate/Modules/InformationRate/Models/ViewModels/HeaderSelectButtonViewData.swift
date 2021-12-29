@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct HeaderSelectButtonViewData {
+struct HeaderSelectButtonViewData: ViewDataType {
     let header: String
 }

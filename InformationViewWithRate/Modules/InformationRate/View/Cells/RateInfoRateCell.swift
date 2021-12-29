@@ -12,7 +12,7 @@ import UIKit
 class RateInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
-    private lazy var ourRate: UILabel = {
+    private lazy var nameRate: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         label.textColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 1)
@@ -22,7 +22,7 @@ class RateInfoRateCell: CellViewType {
         return label
     }()
     
-    private lazy var rate: UILabel = {
+    private lazy var rateLabel: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0, green: 0.686, blue: 1, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
@@ -33,29 +33,29 @@ class RateInfoRateCell: CellViewType {
     }()
     
     //MARK: - init -
-    private func commonInit(nameRate: String, rate: String){
-        ourRate.text = nameRate
-        self.rate.text = rate
+    private func setupData(nameRate: String, rate: String){
+        self.nameRate.text = nameRate
+        self.rateLabel.text = rate
     }
     
     //MARK: - Setup View -
     override func addSubviews() {
         super.addSubviews()
-        contentView.addSubview(ourRate)
-        contentView.addSubview(rate)
+        contentView.addSubview(nameRate)
+        contentView.addSubview(rateLabel)
     }
     
     override func addConstraints() {
         super.addConstraints()
         NSLayoutConstraint.activate([
-            ourRate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 28),
-            ourRate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
-            ourRate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
-            ourRate.trailingAnchor.constraint(equalTo: rate.leadingAnchor, constant: -12),
+            nameRate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 28),
+            nameRate.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 32),
+            nameRate.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12),
+            nameRate.trailingAnchor.constraint(equalTo: rateLabel.leadingAnchor, constant: -12),
             
-            rate.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 29),
-            rate.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
-            rate.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32)
+            rateLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 29),
+            rateLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor),
+            rateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -32)
         ])
     }
 }
@@ -63,8 +63,7 @@ class RateInfoRateCell: CellViewType {
 extension RateInfoRateCell: Updatable {
     typealias ViewData = RateInfoViewData
     
-    func updateWithViewData(viewData: ViewData) {
-        commonInit(nameRate: viewData.title, rate: viewData.rate)
-        addConstraints()
+    func updateWithViewData(_ viewData: ViewData) {
+        setupData(nameRate: viewData.title, rate: viewData.rate)
     }
 }

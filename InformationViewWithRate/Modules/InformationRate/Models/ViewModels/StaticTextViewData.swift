@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct StaticTextViewData {
-    let header, text: String
+struct StaticTextViewData: ViewDataType {
+    let header: String
+    let text: String
 }

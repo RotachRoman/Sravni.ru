@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct BulletViewData {
+struct BulletViewData: ViewDataType {
     let text: String
 }

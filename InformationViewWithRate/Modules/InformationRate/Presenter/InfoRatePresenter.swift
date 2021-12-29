@@ -17,7 +17,7 @@ final class InfoRatePresenter {
     
     private var nameAboutInformation: String
     
-    private var viewModels: [Any] = []
+    private var viewModels: [ViewDataType] = []
 
     // MARK: - Lifecycle -
     init(interactor: InfoRateInteractorType, routerDelegate: InfoRatePresenterRouterDelegate, nameAboutInformation: String) {
@@ -34,10 +34,8 @@ extension InfoRatePresenter: InfoRatePresenterType {
         self.view = informationRateView
         self.interactor.fetchInformation(aboutName: nameAboutInformation)
     }
-    func getModelView(for index: Int) -> Any? {
-        if index < getCountView() {
-        return viewModels[index]
-        } else { return nil }
+    func getModelView(for index: Int) -> ViewDataType? {
+        return index < getCountView() ? viewModels[index] : nil
     }
     func getCountView() -> Int {
         return viewModels.count
@@ -71,12 +69,12 @@ extension InfoRatePresenter: InfoRateInteractorDelegate {
 //    Создание моделей вью
     private func createViewModels(informationTariff: InfoTariff){
         let rate = informationTariff.informationRate
-        var arrayView: [Any?] = [
+        var arrayView: [ViewDataType?] = [
             HeaderViewData(header: rate.name + "- " + rate.header, title: rate.headerTitle, imageName: rate.name),
             StaticTextViewData(header: "Как определяется?", text: rate.staticText)]
         rate.bullet?.forEach{ arrayView.append(BulletViewData(text: $0))}
-        arrayView.append(contentsOf:
-        [TariffsViewData(header: "Минимальный и максимальный " + rate.header.lowercased(),
+        arrayView.append(
+        TariffsViewData(header: "Минимальный и максимальный " + rate.header.lowercased(),
                         cheaperTariff: TariffViewData(
                             text: rate.minRate.info,
                             ratio: rate.minRate.ratio,
@@ -89,9 +87,9 @@ extension InfoRatePresenter: InfoRateInteractorDelegate {
                             ratio: informationTariff.informationRate.maxRate.ratio,
                             sale: informationTariff.informationRate.maxRate.sale,
                             backgroundCoolor: informationTariff.expensivelyColor.backgound,
-                            saleColor: informationTariff.expensivelyColor.sale)),
-        ButtonHeaderViewData(title: "Узнайте свой " + rate.header.lowercased()),
-        ])
+                            saleColor: informationTariff.expensivelyColor.sale)))
+        
+        arrayView.append(ButtonHeaderViewData(title: "Узнайте свой " + rate.header.lowercased()))
         if rate.note != nil {
             arrayView.append(NoteViewData(title: rate.note!.title, text: rate.note!.text))
         }
@@ -103,6 +101,6 @@ extension InfoRatePresenter: InfoRateInteractorDelegate {
         if currency != 0 {
             arrayView.append(RateInfoViewData(title: "Ваш коэфициент " + rate.name, rate: "×" + String(describing: currency)))
         }
-        viewModels = arrayView.filter{ $0 != nil } as [Any]
+        viewModels = arrayView.filter{ $0 != nil } as! [ViewDataType]
     }
 }

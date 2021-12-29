@@ -8,6 +8,7 @@
 import Foundation
 
 struct Rate: Codable {
-    let ratio, info: String
+    let ratio: String
+    let info: String
     let sale: String?
 }

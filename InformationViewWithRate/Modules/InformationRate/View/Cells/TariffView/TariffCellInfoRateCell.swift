@@ -10,24 +10,21 @@ import UIKit
 
 // MARK: - Две ячейки с тарифом
 final class TariffCellInfoRateCell: CellViewHeaderType {
-    private var cheaperTariff: TariffInfoRateView?
-    private var expensivelyTariff: TariffInfoRateView?
-    
-    //    MARK: - init -
-    
-    private func commonInit(cheaperTariff: TariffInfoRateView, expensivelyTariff: TariffInfoRateView){
-        self.cheaperTariff = cheaperTariff
-        self.expensivelyTariff = expensivelyTariff
-
-        cheaperTariff.translatesAutoresizingMaskIntoConstraints = false
-        expensivelyTariff.translatesAutoresizingMaskIntoConstraints = false
-    }
+    private lazy var cheaperTariff: TariffInfoRateView = {
+        let tariff = TariffInfoRateView()
+        tariff.translatesAutoresizingMaskIntoConstraints = false
+        return tariff
+    }()
+    private var expensivelyTariff: TariffInfoRateView = {
+        let tariff = TariffInfoRateView()
+        tariff.translatesAutoresizingMaskIntoConstraints = false
+        return tariff
+    }()
     
     //MARK: - Setup View -
     override func addSubviews() {
         super.addSubviews()
-        guard let _ = cheaperTariff else { return }
-        [cheaperTariff!, expensivelyTariff!].forEach {
+        [cheaperTariff, expensivelyTariff].forEach {
             contentView.addSubview($0)
         }
     }
@@ -35,9 +32,6 @@ final class TariffCellInfoRateCell: CellViewHeaderType {
     override func addConstraints(){
         let sideConstant: CGFloat = 16
         super.addConstraints()
-        guard let cheaperTariff = cheaperTariff,
-        let expensivelyTariff = expensivelyTariff
-        else { return }
         NSLayoutConstraint.activate([
             header.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24)
         ])
@@ -62,11 +56,10 @@ final class TariffCellInfoRateCell: CellViewHeaderType {
 extension TariffCellInfoRateCell: Updatable {
     typealias ViewData = TariffsViewData
     
-    func updateWithViewData(viewData: ViewData) {
+    func updateWithViewData(_ viewData: ViewData) {
         super.updateWithViewData(header: viewData.header)
-        commonInit(
-            cheaperTariff: TariffInfoRateView(text: viewData.cheaperTariff.text, ratio: viewData.cheaperTariff.ratio, sale: viewData.cheaperTariff.sale, backgroundCoolor: viewData.cheaperTariff.backgroundCoolor, saleColor: viewData.cheaperTariff.saleColor),
-            expensivelyTariff: TariffInfoRateView(text: viewData.expensivelyTariff.text, ratio: viewData.expensivelyTariff.ratio, sale: viewData.expensivelyTariff.sale, backgroundCoolor: viewData.expensivelyTariff.backgroundCoolor, saleColor: viewData.expensivelyTariff.saleColor))
+        cheaperTariff.updateWithViewData(viewData.cheaperTariff)
+        expensivelyTariff.updateWithViewData(viewData.expensivelyTariff)
         self.addSubviews()
         self.addConstraints()
     }

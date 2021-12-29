@@ -37,13 +37,20 @@ protocol InfoRateViewControllerType: AnyObject {
 //MARK: Cell
 protocol Updatable: AnyObject {
     associatedtype ViewData
-    func updateWithViewData(viewData: ViewData)
+    func updateWithViewData(_ viewData: ViewData)
+}
+
+protocol CellConfiguratorType {
+    var reuseIdentifier: String { get }
+    var cellClass: AnyClass { get }
+
+    func updateCell(cell: UITableViewCell)
 }
 
 //MARK: - Presenter
 protocol InfoRatePresenterType: AnyObject {
     func onInformationRatePresenter(on infoRonChooseRateTappedateView: InfoRateViewControllerType)
-    func getModelView(for index: Int) -> Any?
+    func getModelView(for index: Int) -> ViewDataType?
     func getCountView() -> Int
 }
 
@@ -65,4 +72,29 @@ protocol InfoRateInteractorType: AnyObject {
 
 protocol InfoRateInteractorDelegate: AnyObject {
     func onInformationRateFetched(informationTariff: InfoTariff)
+}
+
+struct CellConfigurator<Cell> where Cell: Updatable, Cell: CellViewType {
+
+    let viewData: Cell.ViewData
+    let reuseIdentifier: String = NSStringFromClass(Cell.self)
+    let cellClass: AnyClass = Cell.self
+    
+    func updateCell(cell: UITableViewCell) {
+        if let cell = cell as? Cell {
+            cell.updateWithViewData(viewData)
+        }
+    }
+}
+
+
+protocol CellConfiguratorProtocol {
+    var reuseIdentifier: String { get }
+    var cellClass: AnyClass { get }
+
+    func updateCell(cell: UITableViewCell)
+}
+
+extension CellConfigurator: CellConfiguratorProtocol {
+    
 }

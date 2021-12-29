@@ -11,7 +11,7 @@ import UIKit
 class BulletInfoRateCell: CellViewType {
     
     //    MARK: - UI elements
-    private lazy var text: UILabel = {
+    private lazy var bulletTextLabel: UILabel = {
         let label = UILabel( )
         label.textColor = UIColor(red: 0.078, green: 0.141, blue: 0.22, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
@@ -29,13 +29,16 @@ class BulletInfoRateCell: CellViewType {
         return image
     }()
     
-    //MARK: - init -
-
+    //MARK: - Setup Data -
+    private func setupData(bulletTextLabel bulletText: String){
+        self.bulletTextLabel.text = bulletText
+    }
+    
     //MARK: - Setup View -
     override func addSubviews() {
         super.addSubviews()
         contentView.addSubview(bulletImage)
-        contentView.addSubview(text)
+        contentView.addSubview(bulletTextLabel)
     }
    
     override func addConstraints() {
@@ -47,10 +50,10 @@ class BulletInfoRateCell: CellViewType {
             bulletImage.heightAnchor.constraint(equalToConstant: 4),
             bulletImage.widthAnchor.constraint(equalToConstant: 4),
             
-            text.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 9),
-            text.leadingAnchor.constraint(equalTo: bulletImage.trailingAnchor, constant: constant),
-            text.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            text.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -constant)
+            bulletTextLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 9),
+            bulletTextLabel.leadingAnchor.constraint(equalTo: bulletImage.trailingAnchor, constant: constant),
+            bulletTextLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            bulletTextLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -constant)
         ])
     }
 }
@@ -58,8 +61,8 @@ class BulletInfoRateCell: CellViewType {
 extension BulletInfoRateCell: Updatable {
     typealias ViewData = BulletViewData
     
-    func updateWithViewData(viewData: ViewData) {
-        self.text.text = viewData.text
+    func updateWithViewData(_ viewData: ViewData) {
+        self.setupData(bulletTextLabel: viewData.text)
     }
 }
 

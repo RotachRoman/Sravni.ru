@@ -9,11 +9,10 @@ import UIKit
 
 // MARK: - Ячейка с тарифом
 class TariffInfoRateView: ViewType {
-    
     private var backColor: UIColor!
     
     //    MARK: - UI elements
-    private lazy var capsul: UILabel = {
+    private lazy var capsulView: UILabel = {
         let view = UILabel()
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -71,18 +70,8 @@ class TariffInfoRateView: ViewType {
         return label
     }()
     
-    //    MARK: - init -
-    init(text: String, ratio: String, sale: String?, backgroundCoolor: UIColor, saleColor: UIColor) {
-        super.init()
-        commonInit(text: text, ratio: ratio, sale: sale, backgroundColor: backgroundCoolor, saleColor: saleColor)
-        addConstraints()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func commonInit(text: String,
+    //    MARK: - Setup Data -
+    private func setupData(text: String,
                         ratio: String,
                         sale: String?,
                         backgroundColor: UIColor,
@@ -92,7 +81,7 @@ class TariffInfoRateView: ViewType {
         self.backColor = backgroundColor
         if let sale = sale  {
             self.capsulLabel.text = sale
-            self.capsul.layer.backgroundColor = saleColor.cgColor
+            self.capsulView.layer.backgroundColor = saleColor.cgColor
         } else {
             self.ratioLabel.textColor = saleColor
         }
@@ -112,8 +101,8 @@ class TariffInfoRateView: ViewType {
     }
     
     private func addAdditionalSubwiew(){
-        self.addSubview(capsul)
-        capsul.addSubview(capsulLabel)
+        self.addSubview(capsulView)
+        capsulView.addSubview(capsulLabel)
     }
     
     override func addConstraints() {
@@ -131,15 +120,15 @@ class TariffInfoRateView: ViewType {
         if capsulLabel.text != "" {
             addAdditionalSubwiew()
             NSLayoutConstraint.activate([
-                capsul.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
-                capsul.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor),
-                capsul.bottomAnchor.constraint(lessThanOrEqualTo: aboutLabel.bottomAnchor),
-                capsul.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+                capsulView.topAnchor.constraint(equalTo: self.topAnchor, constant: 18),
+                capsulView.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor),
+                capsulView.bottomAnchor.constraint(lessThanOrEqualTo: aboutLabel.bottomAnchor),
+                capsulView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
                 
-                capsulLabel.topAnchor.constraint(equalTo: capsul.topAnchor, constant: 3),
-                capsulLabel.leadingAnchor.constraint(equalTo: capsul.leadingAnchor, constant: 4),
-                capsulLabel.bottomAnchor.constraint(equalTo: capsul.bottomAnchor, constant: -3),
-                capsulLabel.trailingAnchor.constraint(equalTo: capsul.trailingAnchor, constant: -4)
+                capsulLabel.topAnchor.constraint(equalTo: capsulView.topAnchor, constant: 3),
+                capsulLabel.leadingAnchor.constraint(equalTo: capsulView.leadingAnchor, constant: 4),
+                capsulLabel.bottomAnchor.constraint(equalTo: capsulView.bottomAnchor, constant: -3),
+                capsulLabel.trailingAnchor.constraint(equalTo: capsulView.trailingAnchor, constant: -4)
             ])
         }
         let bottomBezierViewConstraint = self.bottomAnchor.constraint(greaterThanOrEqualTo: aboutLabel.bottomAnchor, constant: 16)
@@ -150,8 +139,10 @@ class TariffInfoRateView: ViewType {
 extension TariffInfoRateView: Updatable {
     typealias ViewData = TariffViewData
     
-    func updateWithViewData(viewData: TariffViewData) {
-        commonInit(text: viewData.text, ratio: viewData.ratio, sale: viewData.sale, backgroundColor: viewData.backgroundCoolor, saleColor: viewData.saleColor)
+    func updateWithViewData(_ viewData: TariffViewData) {
+        setupData(text: viewData.text, ratio: viewData.ratio, sale: viewData.sale, backgroundColor: viewData.backgroundCoolor, saleColor: viewData.saleColor)
+        addSubviews()
+        addConstraints()
     }
 }
 

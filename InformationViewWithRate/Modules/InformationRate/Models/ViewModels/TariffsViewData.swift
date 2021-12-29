@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TariffsViewData {
+struct TariffsViewData: ViewDataType {
     let header: String
     let cheaperTariff, expensivelyTariff: TariffViewData
 }

@@ -7,8 +7,9 @@
 
 import UIKit
 
-struct TariffViewData {
-    let text, ratio: String
+struct TariffViewData: ViewDataType {
+    let text: String
+    let ratio: String
     let sale: String?
     let backgroundCoolor, saleColor: UIColor
 }

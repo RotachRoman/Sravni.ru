@@ -8,11 +8,12 @@
 import UIKit
 
 final class InfoRateTableViewController: ViewController {
-    
     var presenter: InfoRatePresenterType!
     
     var additionallyCells: [AnyClass] = []
     var additionallyIndex: Int
+    
+    let cells: [CellConfiguratorProtocol] = []
     
     //    MARK: - UI elements
     lazy var tableView: UITableView = {
@@ -21,7 +22,10 @@ final class InfoRateTableViewController: ViewController {
         tableView.register(CellViewType.self, forCellReuseIdentifier: String(describing: CellViewType.self))
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor(red: 0.722, green: 0.914, blue: 1, alpha: 0.25)
+        
+       
+        
+//        tableView.backgroundColor = UIColor(red: 0.722, green: 0.914, blue: 1, alpha: 0.25)
         tableView.allowsSelection = false
         tableView.showsVerticalScrollIndicator = false
         tableView.contentInsetAdjustmentBehavior = .never
@@ -34,7 +38,6 @@ final class InfoRateTableViewController: ViewController {
         let barButton = UIBarButtonItem(customView: button)
         return barButton
     }()
-    
     
     //MARK: - init -
     init(presenter: InfoRatePresenterType){
@@ -58,6 +61,12 @@ final class InfoRateTableViewController: ViewController {
     override func addSubviews() {
         super.addSubviews()
         self.view.addSubview(tableView)
+        
+        var frame = self.tableView.bounds
+        frame.origin.y = -frame.size.height
+        let grayView = UIView(frame: frame)
+        grayView.backgroundColor = .red
+        self.tableView.addSubview(grayView)
     }
     
     override func addConstraints() {
@@ -79,7 +88,8 @@ final class InfoRateTableViewController: ViewController {
     }
     
     private func registerCells() {
-        let cells: [AnyClass] = [   HeaderInfoRateCell.self,
+        [
+            HeaderInfoRateCell.self,
             StaticTextInfoRateCell.self,
             BulletInfoRateCell.self,
             TariffCellInfoRateCell.self,
@@ -88,8 +98,7 @@ final class InfoRateTableViewController: ViewController {
             RateInfoRateCell.self,
             NoteInfoRateCell.self,
             BackButtonInfoRateCell.self
-        ]
-        cells.forEach { tableView.register($0, forCellReuseIdentifier: String(describing: $0)) }
+        ].forEach { tableView.registerCell($0) }
     }
     
     private func additionallyCell(){
@@ -110,40 +119,40 @@ extension InfoRateTableViewController: UITableViewDataSource {
         switch modelView {
         case is HeaderViewData :
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HeaderInfoRateCell.self)) as! HeaderInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! HeaderViewData)
+            cell.updateWithViewData(modelView as! HeaderViewData)
             return cell
             
         case is StaticTextViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: StaticTextInfoRateCell.self)) as! StaticTextInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! StaticTextViewData)
+            cell.updateWithViewData(modelView as! StaticTextViewData)
             return cell
             
         case is BulletViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: BulletInfoRateCell.self)) as! BulletInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! BulletViewData)
+            cell.updateWithViewData(modelView as! BulletViewData)
             return cell
         
         case is TariffsViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TariffCellInfoRateCell.self)) as! TariffCellInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! TariffsViewData)
+            cell.updateWithViewData(modelView as! TariffsViewData)
             return cell
             
         case is ButtonHeaderViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: HeaderSlctButtonInfoRateCell.self)) as! HeaderSlctButtonInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! ButtonHeaderViewData)
+            cell.updateWithViewData(modelView as! ButtonHeaderViewData)
             return cell
             
         case is ButtonChangeTariffViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ButtonRateCell.self)) as! ButtonRateCell
-            cell.updateWithViewData(viewData: modelView as! ButtonChangeTariffViewData)
+            cell.updateWithViewData(modelView as! ButtonChangeTariffViewData)
             return cell
         case is RateInfoViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RateInfoRateCell.self)) as! RateInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! RateInfoViewData)
+            cell.updateWithViewData(modelView as! RateInfoViewData)
             return cell
         case is NoteViewData:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: NoteInfoRateCell.self)) as! NoteInfoRateCell
-            cell.updateWithViewData(viewData: modelView as! NoteViewData)
+            cell.updateWithViewData(modelView as! NoteViewData)
             return cell
         default:
             return UITableViewCell()
@@ -158,8 +167,14 @@ extension InfoRateTableViewController: UITableViewDataSource {
 //Вызов из презентора, передача данных
 extension InfoRateTableViewController: InfoRateViewControllerType {
     func onInformationRateFetched() {
+//        let index = 0
+//        while(index < presenter.getCountView() + additionallyCells.count){
+//            let model = presenter.getModelView(for: index)
+////            cells.append<HeaderInfoRateCell>(CellConfigurator(viewData: model))
+//        }
         tableView.reloadData()
     }
 }
+
 
 

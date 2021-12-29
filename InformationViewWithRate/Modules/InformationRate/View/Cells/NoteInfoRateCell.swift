@@ -41,8 +41,8 @@ class NoteInfoRateCell: CellViewType {
         return label
     }()
     
-    //MARK: - init -
-    private func commonInit(title: String, text: String){
+    //MARK: - Setup Data -
+    private func setupData(title: String, text: String){
         self.title.text = title
         let regularAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .regular)]
         let boldAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .bold)]
@@ -63,7 +63,6 @@ class NoteInfoRateCell: CellViewType {
         
         let constant: CGFloat = 16
         NSLayoutConstraint.activate([
-            
             layerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
             layerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: constant),
             layerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -14),
@@ -84,8 +83,7 @@ class NoteInfoRateCell: CellViewType {
 extension NoteInfoRateCell: Updatable {
     typealias ViewData = NoteViewData
     
-    func updateWithViewData(viewData: ViewData) {
-        commonInit(title: viewData.title, text: viewData.text)
-        addConstraints()
+    func updateWithViewData(_ viewData: ViewData) {
+        setupData(title: viewData.title, text: viewData.text)
     }
 }

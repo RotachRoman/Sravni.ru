@@ -31,7 +31,6 @@ class HeaderInfoRateCell: CellViewType {
         return label
     }()
     
-//   MARK: - OpenSans-Regular ??
     private lazy var title: UILabel = {
         let label = UILabel()
         label.textColor = UIColor(red: 0.388, green: 0.435, blue: 0.49, alpha: 1)
@@ -44,9 +43,8 @@ class HeaderInfoRateCell: CellViewType {
         return label
     }()
     
-    //MARK: - init -
-    
-    private func commonInit(header: String, title: String, imageName: String){
+    //MARK: - Setup Data -
+    private func setupData(header: String, title: String, imageName: String){
         image.image = UIImage(named: imageName)
         self.header.text = header
         self.title.text = title
@@ -82,8 +80,8 @@ class HeaderInfoRateCell: CellViewType {
 extension HeaderInfoRateCell: Updatable {
     typealias ViewData = HeaderViewData
     
-    func updateWithViewData(viewData: ViewData) {
-        commonInit(header: viewData.header, title: viewData.title, imageName: viewData.imageName)
+    func updateWithViewData(_ viewData: ViewData) {
+        setupData(header: viewData.header, title: viewData.title, imageName: viewData.imageName)
         addConstraints()
         addSubviews()
     }

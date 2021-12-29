@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct ButtonHeaderViewData{
+struct ButtonHeaderViewData: ViewDataType{
     let title: String
 }

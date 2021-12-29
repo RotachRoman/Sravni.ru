@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ButtonChangeTariffViewData {
+struct ButtonChangeTariffViewData: ViewDataType {
     let presenter: СhangeRatePresenterType
     let title: String
     var rateSelection: String?

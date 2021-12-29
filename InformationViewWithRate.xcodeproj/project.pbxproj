@@ -34,6 +34,7 @@
 		CB8A702727787EE7005B824E /* ButtonHeaderViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A702627787EE7005B824E /* ButtonHeaderViewData.swift */; };
 		CB8A70292778A594005B824E /* RateInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A70282778A594005B824E /* RateInfoViewModel.swift */; };
 		CB8A702B2778B498005B824E /* NoteViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A702A2778B498005B824E /* NoteViewData.swift */; };
+		CB8A702D277C71C7005B824E /* UITableViewRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8A702C277C71C7005B824E /* UITableViewRegister.swift */; };
 		CBAC6FBD2767AA8B00342297 /* KMInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB82767AA8B00342297 /* KMInformation.json */; };
 		CBAC6FBE2767AA8B00342297 /* KOInformation.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FB92767AA8B00342297 /* KOInformation.json */; };
 		CBAC6FBF2767AA8B00342297 /* GetRate.json in Resources */ = {isa = PBXBuildFile; fileRef = CBAC6FBA2767AA8B00342297 /* GetRate.json */; };
@@ -97,6 +98,7 @@
 		CB8A702627787EE7005B824E /* ButtonHeaderViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHeaderViewData.swift; sourceTree = "<group>"; };
 		CB8A70282778A594005B824E /* RateInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInfoViewModel.swift; sourceTree = "<group>"; };
 		CB8A702A2778B498005B824E /* NoteViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewData.swift; sourceTree = "<group>"; };
+		CB8A702C277C71C7005B824E /* UITableViewRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegister.swift; sourceTree = "<group>"; };
 		CBAC6FB82767AA8B00342297 /* KMInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KMInformation.json; sourceTree = "<group>"; };
 		CBAC6FB92767AA8B00342297 /* KOInformation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = KOInformation.json; sourceTree = "<group>"; };
 		CBAC6FBA2767AA8B00342297 /* GetRate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GetRate.json; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				CB87631D275E4E5B00CC8994 /* StringHightExtension.swift */,
+				CB8A702C277C71C7005B824E /* UITableViewRegister.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				CBAC6FF52767AAD000342297 /* BackButtonInfoRateCell.swift in Sources */,
 				CB8A702327772612005B824E /* ButtonChangeTariffViewData.swift in Sources */,
 				CB8A701B27772388005B824E /* StaticTextViewData.swift in Sources */,
+				CB8A702D277C71C7005B824E /* UITableViewRegister.swift in Sources */,
 				CBAC6FEE2767AAD000342297 /* RateCalculateModel.swift in Sources */,
 				CBAC6FF02767AAD000342297 /* InformationRateModel.swift in Sources */,
 				CB8A701927772351005B824E /* HeaderViewData.swift in Sources */,

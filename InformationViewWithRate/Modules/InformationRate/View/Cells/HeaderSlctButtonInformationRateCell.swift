@@ -11,8 +11,6 @@ import UIKit
 //MARK: - Заголовок ячеек/ячейки выбора коэффициента
 class HeaderSlctButtonInfoRateCell: CellViewHeaderType {
     
-    //    MARK: - init -
-    
     //MARK: - Setup View -
     override func addConstraints() {
         super.addConstraints()
@@ -25,9 +23,7 @@ class HeaderSlctButtonInfoRateCell: CellViewHeaderType {
 extension HeaderSlctButtonInfoRateCell: Updatable {
     typealias ViewData = ButtonHeaderViewData
     
-    func updateWithViewData(viewData: ViewData) {
+    func updateWithViewData(_ viewData: ViewData) {
         super.updateWithViewData(header: viewData.title)
-        addConstraints()
-        addSubviews()
     }
 }

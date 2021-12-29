@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct NoteViewData {
-    let title, text: String
+struct NoteViewData: ViewDataType {
+    let title: String
+    let text: String
 }

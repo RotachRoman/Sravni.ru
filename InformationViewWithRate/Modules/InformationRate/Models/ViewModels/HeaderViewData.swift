@@ -7,6 +7,12 @@
 
 import Foundation
 
-struct HeaderViewData {
-    let header, title, imageName: String
+protocol ViewDataType {
+    
+}
+
+struct HeaderViewData: ViewDataType {
+    let header: String
+    let title: String
+    let imageName: String
 }

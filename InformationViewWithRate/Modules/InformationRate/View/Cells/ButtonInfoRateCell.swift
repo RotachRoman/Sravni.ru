@@ -63,15 +63,8 @@ class ButtonRateCell: CellViewType {
         title.attributedText = NSMutableAttributedString(string: "", attributes: [NSAttributedString.Key.kern: -0.08])
     }
     
-    //MARK: - init -
-//    init(title: String, rateSelection: String?){
-//        self.presenter = presenter
-//        super.init()
-//        addConstraints()
-//        self.setupFunctionLayerView()
-//    }
-    
-    private func commonInit(presenter: СhangeRatePresenterType, title: String, rateSelection: String?){
+    //MARK: - Setup Data -
+    private func setupData(presenter: СhangeRatePresenterType, title: String, rateSelection: String?){
         self.presenter = presenter
         if let rateSelection = rateSelection {
             self.rateSelection.text = rateSelection
@@ -88,10 +81,6 @@ class ButtonRateCell: CellViewType {
         self.layerButton.addGestureRecognizer(tap)
         self.layerButton.isUserInteractionEnabled = true
     }
-    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
 //    MARK: - @objc func
 //    Функция, срабатывающая по нажатию на layerView
@@ -147,7 +136,6 @@ class ButtonRateCell: CellViewType {
             NSLayoutConstraint.activate([
                 title.topAnchor.constraint(equalTo: layerButton.topAnchor, constant: 10)
             ])
-            
             NSLayoutConstraint.activate([
                 rateSelection.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 2),
                 rateSelection.leadingAnchor.constraint(equalTo: layerButton.leadingAnchor, constant: defaultConstant),
@@ -161,8 +149,8 @@ class ButtonRateCell: CellViewType {
 extension ButtonRateCell: Updatable {
     typealias ViewData = ButtonChangeTariffViewData
     
-    func updateWithViewData(viewData: ViewData) {
-        commonInit(presenter: viewData.presenter, title: viewData.title, rateSelection: viewData.rateSelection)
+    func updateWithViewData(_ viewData: ViewData) {
+        setupData(presenter: viewData.presenter, title: viewData.title, rateSelection: viewData.rateSelection)
         addConstraints()
     }
 }

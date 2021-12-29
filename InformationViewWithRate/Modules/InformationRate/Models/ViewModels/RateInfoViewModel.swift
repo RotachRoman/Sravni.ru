@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct RateInfoViewData {
-    let title, rate: String
+struct RateInfoViewData: ViewDataType {
+    let title: String
+    let rate: String
 }

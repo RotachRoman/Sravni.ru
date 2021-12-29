@@ -24,9 +24,8 @@ class StaticTextInfoRateCell: CellViewHeaderType {
         return label
     }()
     
-    //MARK: - init -
-    
-    private func commonInit(text: String) {
+    //MARK: - Setup Data -
+    private func setupData(text: String) {
         let regularAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .regular)]
         let boldAttribute = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15, weight: .bold)]
         let changedText = text.changeStyle(startTeg: "&*", endTeg: "*&", normalAttribute: regularAttribute, tegAttribute: boldAttribute)
@@ -58,9 +57,9 @@ class StaticTextInfoRateCell: CellViewHeaderType {
 extension StaticTextInfoRateCell: Updatable {
     typealias ViewData = StaticTextViewData
     
-    func updateWithViewData(viewData: ViewData) {
+    func updateWithViewData(_ viewData: ViewData) {
         super.updateWithViewData(header: viewData.header)
-        commonInit(text: viewData.text)
+        setupData(text: viewData.text)
         addConstraints()
         addSubviews()
     }
