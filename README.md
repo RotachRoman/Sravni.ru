@@ -1,4 +1,3 @@
-# Sravni.ru
 # Задание Sravni.ru
 
 ## Требования
